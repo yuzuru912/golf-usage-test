@@ -28,13 +28,4 @@ const DATA_URL = 'usage-sample.json';
   （這時 API 端要加 `Access-Control-Allow-Origin: *`）
 - 也可以不改檔案，直接開 `https://<你的帳號>.github.io/golf-usage/?src=你的JSON網址` 測試
 
-## ⚠️ 重要：不要把真實員工資料放上 GitHub Pages
 
-GitHub Pages 的網頁**任何人只要知道網址就看得到**，就算 repo 設成 Private，
-Pages 發布出來的內容仍然是公開的（私人 Pages 只有 Enterprise 方案才有）。
-
-- 用 `usage-sample.json` 這種假資料測試 → 沒問題
-- 放真實的工號、姓名、手機 → **不要這樣做**，正式上線請放在公司內網或自家伺服器
-
-另外 GitHub Pages 只能放靜態檔案，所以 `?date={date}` 這種帶參數的查詢方式在這裡不能用，
-測試時請用「一次回傳整批」的模式（本測試包就是這樣設定的）。
