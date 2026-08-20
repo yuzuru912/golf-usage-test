@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f5132">
+<title>高爾夫球場使用狀況</title>
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f5132'/%3E%3Ccircle cx='50' cy='40' r='20' fill='%23fff'/%3E%3Crect x='46' y='58' width='8' height='26' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f4f6f5; --card:#ffffff; --ink:#15201b; --muted:#6b7d74;
+  --line:#e2e8e5; --brand:#0f5132; --brand-soft:#e6f0ea;
+  --std:#1d6fb8; --std-soft:#e5f0fa;
+  --dyn:#b8541d; --dyn-soft:#fbeee5;
+  --we:#c0392b;
+  --shadow:0 1px 2px rgba(16,32,24,.06),0 4px 14px rgba(16,32,24,.05);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#101613; --card:#18211d; --ink:#e8efeb; --muted:#93a69c;
+    --line:#26332d; --brand:#4ea87a; --brand-soft:#1b2b23;
+    --std:#67aeea; --std-soft:#152532;
+    --dyn:#e8a06a; --dyn-soft:#2c2018;
+    --we:#e78b84;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  background:var(--bg); color:var(--ink); font-size:16px; line-height:1.5;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.wrap{max-width:720px;margin:0 auto}
+
+/* ---------- header ---------- */
+header{
+  position:sticky; top:0; z-index:20; background:var(--brand); color:#fff;
+  padding:calc(env(safe-area-inset-top) + 12px) 16px 12px;
+}
+.hrow{display:flex;align-items:center;gap:10px;max-width:720px;margin:0 auto}
+.htitle{font-size:17px;font-weight:700;letter-spacing:.02em;flex:1;margin:0}
+.hsub{font-size:12px;opacity:.8;font-weight:400;display:block;margin-top:1px}
+.iconbtn{
+  border:0;background:rgba(255,255,255,.16);color:#fff;width:38px;height:38px;
+  border-radius:10px;font-size:17px;display:grid;place-items:center;cursor:pointer;flex:none;
+}
+.iconbtn:active{background:rgba(255,255,255,.3)}
+.iconbtn.spin svg{animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* ---------- date bar ---------- */
+.datebar{
+  position:sticky; top:0; z-index:15; background:var(--card);
+  border-bottom:1px solid var(--line); padding:10px 12px;
+}
+.dinner{display:flex;align-items:center;gap:8px;max-width:720px;margin:0 auto}
+.nav{
+  width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
+  background:var(--bg);color:var(--ink);font-size:20px;line-height:1;cursor:pointer;flex:none;
+  display:grid;place-items:center;
+}
+.nav:disabled{opacity:.3;cursor:default}
+.dcenter{
+  flex:1;min-width:0;position:relative;background:none;border:0;padding:4px 2px;
+  color:var(--ink);font:inherit;cursor:pointer;border-radius:12px;
+}
+.dcenter:active{background:var(--bg)}
+.dlabel{font-size:18px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  display:flex;align-items:center;justify-content:center;gap:6px}
+.dlabel svg{flex:none;opacity:.5}
+.dweek{font-size:12px;color:var(--muted);margin-top:-2px}
+
+/* ---------- 日曆 ---------- */
+.calwrap{position:fixed;inset:0;z-index:40;display:none}
+.calwrap.on{display:block}
+.calbd{position:absolute;inset:0;background:rgba(8,16,12,.45);animation:fade .15s ease}
+@keyframes fade{from{opacity:0}}
+.cal{
+  position:absolute;left:50%;transform:translateX(-50%);top:calc(env(safe-area-inset-top) + 118px);
+  width:min(360px,calc(100vw - 24px));background:var(--card);border:1px solid var(--line);
+  border-radius:18px;box-shadow:0 12px 40px rgba(8,16,12,.28);padding:12px 12px 14px;
+  animation:pop .16s cubic-bezier(.2,.9,.3,1.1);
+}
+@keyframes pop{from{opacity:0;transform:translateX(-50%) translateY(-8px) scale(.97)}}
+.calhead{display:flex;align-items:center;gap:6px;margin-bottom:8px}
+.calhead .mt{flex:1;text-align:center;font-size:16px;font-weight:700}
+.mbtn{
+  width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:var(--bg);
+  color:var(--ink);font-size:18px;line-height:1;cursor:pointer;display:grid;place-items:center;flex:none;
+}
+.mbtn:disabled{opacity:.3;cursor:default}
+.calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.wd{text-align:center;font-size:11px;color:var(--muted);font-weight:700;padding:4px 0 6px}
+.wd.we{color:var(--we)}
+.day{
+  position:relative;aspect-ratio:1/1;border:0;background:none;border-radius:11px;
+  color:var(--ink);font-size:15px;font-weight:600;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums;
+}
+.day:disabled{color:var(--line);cursor:default}
+.day.oth{visibility:hidden}
+.day.today{box-shadow:inset 0 0 0 2px var(--brand)}
+.day.sel{background:var(--brand);color:#fff}
+.day .dot{
+  position:absolute;bottom:6px;left:50%;transform:translateX(-50%);
+  width:5px;height:5px;border-radius:50%;background:var(--brand);
+}
+.day.sel .dot{background:#fff}
+.calfoot{display:flex;gap:8px;margin-top:10px}
+.calfoot button{
+  flex:1;height:40px;border-radius:11px;border:1px solid var(--line);background:var(--bg);
+  color:var(--ink);font-size:14px;font-weight:600;cursor:pointer;
+}
+.calfoot .go{background:var(--brand);border-color:var(--brand);color:#fff}
+.calfoot button:disabled{opacity:.35}
+.calhint{font-size:11px;color:var(--muted);text-align:center;margin-top:8px}
+.today{
+  border:1px solid var(--line);background:var(--bg);color:var(--brand);font-weight:600;
+  border-radius:12px;height:44px;padding:0 12px;font-size:14px;cursor:pointer;flex:none;
+}
+.today:disabled{opacity:.35}
+
+/* ---------- filters ---------- */
+.tools{max-width:720px;margin:0 auto;padding:12px 12px 4px}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{
+  border:1px solid var(--line);background:var(--card);color:var(--ink);
+  border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;
+  white-space:nowrap;cursor:pointer;display:flex;align-items:center;gap:6px;
+}
+.chip .n{font-size:12px;font-weight:700;opacity:.65}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+.chip[aria-pressed="true"] .n{opacity:.85}
+.chip.std[aria-pressed="true"]{background:var(--std);border-color:var(--std)}
+.chip.dyn[aria-pressed="true"]{background:var(--dyn);border-color:var(--dyn)}
+.search{
+  margin-top:10px;width:100%;border:1px solid var(--line);background:var(--card);color:var(--ink);
+  border-radius:12px;padding:11px 14px;font-size:16px;
+}
+.search::placeholder{color:var(--muted)}
+
+/* ---------- list ---------- */
+main{max-width:720px;margin:0 auto;padding:8px 12px 32px}
+.count{font-size:13px;color:var(--muted);padding:6px 4px 10px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  box-shadow:var(--shadow);padding:12px 12px 12px 14px;margin-bottom:10px;
+  display:flex;align-items:center;gap:12px;position:relative;overflow:hidden;
+}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--muted)}
+.card.std::before{background:var(--std)}
+.card.dyn::before{background:var(--dyn)}
+.info{flex:1;min-width:0}
+.line1{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.name{font-size:18px;font-weight:700;letter-spacing:.02em}
+.eid{
+  font-size:12px;font-weight:700;color:var(--muted);background:var(--bg);
+  border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-variant-numeric:tabular-nums;
+}
+.line2{display:flex;align-items:center;gap:8px;margin-top:5px;flex-wrap:wrap}
+.tag{font-size:12px;font-weight:700;border-radius:6px;padding:2px 8px}
+.tag.std{color:var(--std);background:var(--std-soft)}
+.tag.dyn{color:var(--dyn);background:var(--dyn-soft)}
+.tag.oth{color:var(--muted);background:var(--bg)}
+.time{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.phone{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.call{
+  flex:none;width:52px;height:52px;border-radius:14px;background:var(--brand-soft);
+  color:var(--brand);display:grid;place-items:center;text-decoration:none;border:1px solid transparent;
+}
+.call:active{background:var(--brand);color:#fff}
+.call.off{background:var(--bg);color:var(--line);pointer-events:none}
+
+.empty{text-align:center;color:var(--muted);padding:56px 20px}
+.empty .big{font-size:40px;margin-bottom:8px;opacity:.5}
+.note{
+  font-size:13px;border-radius:12px;padding:10px 12px;margin:0 0 12px;
+  background:var(--dyn-soft);color:var(--dyn);border:1px solid rgba(0,0,0,.05);
+}
+.foot{max-width:720px;margin:0 auto;padding:4px 16px 28px;font-size:12px;color:var(--muted);text-align:center}
+.sk{height:76px;border-radius:14px;background:var(--card);border:1px solid var(--line);margin-bottom:10px;
+    animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hrow">
+    <div style="flex:1;min-width:0">
+      <h1 class="htitle">高爾夫球場使用狀況<span class="hsub" id="srcNote">載入中…</span></h1>
+    </div>
+    <button class="iconbtn" id="btnRefresh" title="重新整理" aria-label="重新整理">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="datebar">
+  <div class="dinner">
+    <button class="nav" id="prev" aria-label="前一天">‹</button>
+    <button class="dcenter" id="btnCal" aria-label="開啟日曆選擇日期" aria-haspopup="dialog">
+      <div class="dlabel"><span id="dLabel">—</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+      </div>
+      <div class="dweek" id="dWeek">—</div>
+    </button>
+    <button class="nav" id="next" aria-label="後一天">›</button>
+    <button class="today" id="btnToday">今天</button>
+  </div>
+</div>
+
+<div class="calwrap" id="calWrap" role="dialog" aria-modal="true" aria-label="選擇日期">
+  <div class="calbd" id="calBd"></div>
+  <div class="cal">
+    <div class="calhead">
+      <button class="mbtn" id="mPrev" aria-label="上個月">‹</button>
+      <div class="mt" id="mTitle">—</div>
+      <button class="mbtn" id="mNext" aria-label="下個月">›</button>
+    </div>
+    <div class="calgrid" id="calGrid"></div>
+    <div class="calfoot">
+      <button id="calToday">回到今天</button>
+      <button class="go" id="calClose">關閉</button>
+    </div>
+    <div class="calhint" id="calHint"></div>
+  </div>
+</div>
+
+<div class="tools">
+  <div class="chips">
+    <button class="chip all" data-c="all" aria-pressed="true">全部 <span class="n" id="nAll">0</span></button>
+    <button class="chip std" data-c="std" aria-pressed="false">標準球道 <span class="n" id="nStd">0</span></button>
+    <button class="chip dyn" data-c="dyn" aria-pressed="false">動態球道 <span class="n" id="nDyn">0</span></button>
+  </div>
+  <input class="search" id="q" type="search" placeholder="搜尋工號或姓名…" autocomplete="off">
+</div>
+
+<main>
+  <div id="notice"></div>
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+</main>
+
+<div class="foot" id="foot"></div>
+
+<script>
+/* =====================================================================
+   ★★★ 設定區：只要改這裡 ★★★
+   ---------------------------------------------------------------------
+   DATA_URL：高爾夫球網站輸出 JSON 的固定網址。
+     · 若網址可帶日期參數，請用 {date} 當佔位符，程式會自動換成 2026-08-20 格式，
+       例：'https://golf.example.com/api/usage?date={date}'
+     · 若網址一次回傳整批資料（含多天），就不要放 {date}，程式會自行依日期篩選，
+       例：'https://golf.example.com/api/usage.json'
+   也可以不改檔案，直接在網址後面加參數覆寫來源（方便測試 / 給不同人用）：
+       你的頁面.html?src=https%3A%2F%2Fgolf.example.com%2Fapi%2Fusage.json
+   ---------------------------------------------------------------------
+   注意：JSON 來源伺服器需允許跨網域讀取，
+   即回應標頭要有 Access-Control-Allow-Origin: *
+   （若把本檔案放在跟 JSON 同一台伺服器，就不需要處理這個。）
+   ===================================================================== */
+const DATA_URL   = 'usage-sample.json';   // ← 同資料夾的 JSON（GitHub Pages 測試用）
+const RANGE_DAYS = 31;          // 可查詢前後天數（約一個月）
+const AUTO_REFRESH_SEC = 0;     // 設為 60 可每分鐘自動更新；0 = 關閉
+
+/* ===================== 以下不需要修改 ===================== */
+
+/* ---- 示範資料（DATA_URL 沒填或抓取失敗時使用，方便先看版面） ---- */
+const DEMO = (function(){
+  const t = new Date(); const p = n => String(n).padStart(2,'0');
+  const d = k => { const x = new Date(t); x.setDate(x.getDate()+k);
+    return x.getFullYear()+'-'+p(x.getMonth()+1)+'-'+p(x.getDate()); };
+  return [
+    {日期:d(0), 時間:'08:10', 球道:'標準球道', 工號:'A10234', 姓名:'王志明', 手機:'0912-345-678'},
+    {日期:d(0), 時間:'09:00', 球道:'標準球道', 工號:'A10891', 姓名:'林淑芬', 手機:'0933-221-045'},
+    {日期:d(0), 時間:'10:30', 球道:'動態球道', 工號:'B20477', 姓名:'陳建宏', 手機:'0918-770-336'},
+    {日期:d(0), 時間:'13:45', 球道:'動態球道', 工號:'B20112', 姓名:'黃美玲', 手機:'0955-108-224'},
+    {日期:d(0), 時間:'15:20', 球道:'標準球道', 工號:'A10556', 姓名:'張家豪', 手機:'0987-663-190'},
+    {日期:d(1), 時間:'07:50', 球道:'標準球道', 工號:'A10902', 姓名:'吳佩珊', 手機:'0921-448-573'},
+    {日期:d(1), 時間:'11:15', 球道:'動態球道', 工號:'B20983', 姓名:'劉俊傑', 手機:'0966-302-817'},
+    {日期:d(-1),時間:'16:05', 球道:'標準球道', 工號:'A10078', 姓名:'蔡雅婷', 手機:'0977-215-460'}
+  ];
+})();
+
+/* ---- 小工具 ---- */
+const $ = s => document.querySelector(s);
+const pad = n => String(n).padStart(2,'0');
+const ymd = d => d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const parseYmd = s => { const [y,m,dd] = s.split('-').map(Number); return new Date(y, m-1, dd); };
+const addDays = (s,k) => { const d = parseYmd(s); d.setDate(d.getDate()+k); return ymd(d); };
+const WK = ['週日','週一','週二','週三','週四','週五','週六'];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ---- 欄位對照：容許中英文、各種命名 ---- */
+const ALIAS = {
+  date : ['date','日期','usedate','使用日期','playdate','reservedate','預約日期','bookingdate','datetime','使用時間','starttime','開始時間','ts','timestamp'],
+  time : ['time','時間','時段','starttime','開始時間','begintime','hour','teetime','開球時間'],
+  course:['course','球道','type','類型','球道類型','coursetype','coursename','球道名稱','mode','模式','kind','category','分類','lane','field','場地'],
+  eid  : ['empid','employeeid','employee_id','empno','employeeno','工號','員工編號','員工工號','人員編號','staffid','staffno','userid','user_id','memberid','no','number','編號','id','jobno','工號碼'],
+  name : ['name','姓名','empname','員工姓名','username','使用者','使用者姓名','staffname','member','membername','人員','人員姓名','fullname','使用人'],
+  phone: ['phone','mobile','手機','電話','手機號碼','聯絡電話','行動電話','tel','telephone','cellphone','cell','contact','聯絡方式','msisdn']
+};
+function pick(obj, keys){
+  // 建立小寫、去空白/底線/連字號 的鍵值索引
+  const map = {};
+  for (const k in obj){
+    map[String(k).toLowerCase().replace(/[\s_\-]/g,'')] = obj[k];
+  }
+  for (const want of keys){
+    const w = want.toLowerCase().replace(/[\s_\-]/g,'');
+    if (map[w] !== undefined && map[w] !== null && String(map[w]).trim() !== '') return map[w];
+  }
+  return '';
+}
+
+/* ---- 日期 / 時間 解析 ---- */
+function normDate(v){
+  if (v === '' || v == null) return '';
+  if (v instanceof Date) return ymd(v);
+  let s = String(v).trim();
+  let m = s.match(/(\d{4})[-\/年.](\d{1,2})[-\/月.](\d{1,2})/);
+  if (m) return m[1]+'-'+pad(+m[2])+'-'+pad(+m[3]);
+  m = s.match(/^(\d{4})(\d{2})(\d{2})/);            // 20260820
+  if (m) return m[1]+'-'+m[2]+'-'+m[3];
+  m = s.match(/^(\d{2,3})[-\/](\d{1,2})[-\/](\d{1,2})/); // 民國 115/08/20
+  if (m) return (Number(m[1])+1911)+'-'+pad(+m[2])+'-'+pad(+m[3]);
+  const d = new Date(s);
+  return isNaN(d) ? '' : ymd(d);
+}
+function normTime(v){
+  if (v === '' || v == null) return '';
+  const s = String(v).trim();
+  let m = s.match(/(\d{1,2}):(\d{2})/);             // 08:10 / 2026-08-20 08:10
+  if (m && +m[1] < 24) return pad(+m[1])+':'+m[2];
+  m = s.match(/^(\d{1,2})\s*[點点時时]\s*(\d{1,2})?/); // 8點30
+  if (m && +m[1] < 24) return pad(+m[1])+':'+pad(+(m[2]||0));
+  m = s.match(/^([01]\d|2[0-3])([0-5]\d)$/);        // 0810
+  if (m) return m[1]+':'+m[2];
+  if (/^\d/.test(s)) return '';                     // 看起來是日期或流水號，不當時間
+  return s.length <= 10 ? s : '';                   // 例如「上午時段」
+}
+function normCourse(v){
+  const s = String(v == null ? '' : v);
+  if (/動態|dynamic|dyn|模擬|simulat/i.test(s)) return 'dyn';
+  if (/標準|standard|std|正規|一般|real/i.test(s)) return 'std';
+  return 'oth';
+}
+function courseLabel(c, raw){
+  if (c === 'std') return '標準球道';
+  if (c === 'dyn') return '動態球道';
+  return String(raw || '其他').slice(0,10) || '其他';
+}
+
+/* ---- 將任意 JSON 攤平成統一的紀錄陣列 ---- */
+function flatten(json){
+  const out = [];
+  const push = (row, inheritDate, inheritCourse) => {
+    if (!row || typeof row !== 'object') return;
+    const rawDate  = pick(row, ALIAS.date);
+    const rawTime  = pick(row, ALIAS.time);
+    const rawCourse= pick(row, ALIAS.course);
+    const date = normDate(rawDate) || inheritDate || '';
+    let   time = normTime(rawTime);
+    if (!time && rawDate){                          // 日期欄位裡就帶了時間（如 2026-08-20T08:10）
+      const hit = String(rawDate).match(/(\d{1,2}):(\d{2})/);
+      if (hit) time = normTime(hit[0]);
+    }
+    const course = rawCourse ? normCourse(rawCourse) : (inheritCourse || 'oth');
+    out.push({
+      date, time,
+      course,
+      courseRaw: rawCourse || (inheritCourse === 'std' ? '標準球道' : inheritCourse === 'dyn' ? '動態球道' : ''),
+      eid:   String(pick(row, ALIAS.eid)   || '').trim(),
+      name:  String(pick(row, ALIAS.name)  || '').trim(),
+      phone: String(pick(row, ALIAS.phone) || '').trim()
+    });
+  };
+  const walk = (node, inhDate, inhCourse) => {
+    if (Array.isArray(node)) { node.forEach(r => Array.isArray(r) ? walk(r, inhDate, inhCourse) : push(r, inhDate, inhCourse)); return; }
+    if (!node || typeof node !== 'object') return;
+    // 常見包裝
+    for (const k of ['data','records','result','results','rows','list','items','users','players','usage','content']){
+      if (node[k] !== undefined) { walk(node[k], inhDate, inhCourse); return; }
+    }
+    // 以日期或球道為 key 的物件
+    let handled = false;
+    for (const k in node){
+      const v = node[k];
+      if (!v || typeof v !== 'object') continue;
+      const asDate = normDate(k);
+      const asCourse = /標準|動態|standard|dynamic/i.test(k) ? normCourse(k) : null;
+      if (asDate || asCourse){ walk(v, asDate || inhDate, asCourse || inhCourse); handled = true; }
+    }
+    if (!handled) push(node, inhDate, inhCourse);
+  };
+  walk(json, '', null);
+  return out.filter(r => r.eid || r.name || r.phone);
+}
+
+/* ---- 狀態 ---- */
+const params  = new URLSearchParams(location.search);
+const srcUrl  = (params.get('src') || DATA_URL || '').trim();
+const perDate = /\{date\}/i.test(srcUrl);
+const TODAY   = ymd(new Date());
+const MIN     = addDays(TODAY, -RANGE_DAYS);
+const MAX     = addDays(TODAY,  RANGE_DAYS);
+
+let curDate = (function(){
+  const q = normDate(params.get('date') || '');
+  return (q && q >= MIN && q <= MAX) ? q : TODAY;
+})();
+let filter = 'all';
+let query  = '';
+let rows   = [];          // 目前日期可用的全部紀錄
+let usingDemo = false;
+let lastLoad = null;
+const cache = new Map();  // key -> 紀錄陣列
+
+/* ---- 讀取資料 ---- */
+async function load(force){
+  const key = perDate ? curDate : '__all__';
+  if (!force && cache.has(key)) { rows = cache.get(key); render(); return; }
+
+  setLoading(true);
+  let data = null, err = null;
+  if (srcUrl){
+    try{
+      const url = perDate ? srcUrl.replace(/\{date\}/ig, curDate) : srcUrl;
+      const res = await fetch(url + (url.includes('?') ? '&' : '?') + '_t=' + Date.now(), {cache:'no-store'});
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const txt = await res.text();
+      data = JSON.parse(txt);
+    }catch(e){ err = e; }
+  }
+  if (data == null){
+    usingDemo = true;
+    rows = flatten(DEMO);
+    $('#notice').innerHTML = '<div class="note">' +
+      (srcUrl ? '無法連線到資料來源（' + esc(err ? err.message : '未知錯誤') + '），目前顯示的是<b>示範資料</b>。'
+              : '尚未設定 JSON 來源網址，目前顯示的是<b>示範資料</b>。請在檔案設定區填入 DATA_URL，或在網址後加上 <code>?src=你的JSON網址</code>。') +
+      '</div>';
+  } else {
+    usingDemo = false;
+    $('#notice').innerHTML = '';
+    rows = flatten(data);
+  }
+  cache.set(key, rows);
+  lastLoad = new Date();
+  setLoading(false);
+  render();
+}
+function setLoading(on){
+  $('#btnRefresh').classList.toggle('spin', on);
+  if (on) $('#list').innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div>';
+}
+
+/* ---- 篩選與繪製 ---- */
+function todaysRows(){
+  let r = rows.filter(x => !x.date || x.date === curDate);
+  // 若整批資料都沒有日期欄位，就全部顯示（避免誤篩成空白）
+  if (!rows.some(x => x.date)) r = rows.slice();
+  return r.sort((a,b) => (a.time||'~').localeCompare(b.time||'~') || a.name.localeCompare(b.name,'zh-Hant'));
+}
+function render(){
+  const base = todaysRows();
+  const cStd = base.filter(r => r.course === 'std').length;
+  const cDyn = base.filter(r => r.course === 'dyn').length;
+  $('#nAll').textContent = base.length; $('#nStd').textContent = cStd; $('#nDyn').textContent = cDyn;
+
+  let list = filter === 'all' ? base : base.filter(r => r.course === filter);
+  if (query){
+    const q = query.toLowerCase();
+    list = list.filter(r => (r.eid+' '+r.name+' '+r.phone).toLowerCase().includes(q));
+  }
+
+  const d = parseYmd(curDate);
+  $('#dLabel').textContent = (d.getMonth()+1) + ' 月 ' + d.getDate() + ' 日'
+      + (curDate === TODAY ? '（今天）' : '');
+  $('#dWeek').textContent = d.getFullYear() + ' 年・' + WK[d.getDay()];
+  $('#prev').disabled = curDate <= MIN;
+  $('#next').disabled = curDate >= MAX;
+  $('#btnToday').disabled = curDate === TODAY;
+
+  if ($('#calWrap').classList.contains('on')) renderCal();
+
+  $('#count').textContent = list.length
+      ? '共 ' + list.length + ' 位使用者' + (filter==='all' ? '（標準 '+cStd+'・動態 '+cDyn+'）' : '')
+      : '';
+
+  $('#list').innerHTML = list.length ? list.map(card).join('') : `
+    <div class="empty"><div class="big">⛳</div>
+      <div>這一天${filter==='std'?'標準球道':filter==='dyn'?'動態球道':''}沒有使用紀錄</div>
+    </div>`;
+
+  $('#srcNote').textContent = usingDemo ? '示範資料' :
+      (srcUrl ? '資料已更新 ' + pad(lastLoad.getHours()) + ':' + pad(lastLoad.getMinutes()) : '');
+  $('#foot').textContent = '可查詢範圍：' + MIN.replace(/-/g,'/') + " ～ " + MAX.replace(/-/g,'/');
+}
+function card(r){
+  const digits = r.phone.replace(/[^\d+]/g,'');
+  const cls = r.course;
+  return `
+  <div class="card ${cls}">
+    <div class="info">
+      <div class="line1">
+        <span class="name">${esc(r.name || '（未填姓名）')}</span>
+        ${r.eid ? `<span class="eid">${esc(r.eid)}</span>` : ''}
+      </div>
+      <div class="line2">
+        <span class="tag ${cls}">${esc(courseLabel(cls, r.courseRaw))}</span>
+        ${r.time ? `<span class="time">${esc(r.time)}</span>` : ''}
+        ${r.phone ? `<span class="phone">${esc(r.phone)}</span>` : '<span class="phone">無電話</span>'}
+      </div>
+    </div>
+    ${digits
+      ? `<a class="call" href="tel:${esc(digits)}" aria-label="撥打給 ${esc(r.name)}">
+           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+         </a>`
+      : `<span class="call off"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 2l20 20"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6"/></svg></span>`}
+  </div>`;
+}
+
+/* ---- 日曆 ---- */
+let calMonth = curDate.slice(0,7);   // 'YYYY-MM'
+const monthShift = (ym,k) => {
+  let [y,m] = ym.split('-').map(Number);
+  m += k; y += Math.floor((m-1)/12); m = ((m-1)%12+12)%12+1;
+  return y + '-' + pad(m);
+};
+function dayCounts(){                // 各日期筆數（用於日曆上的小圓點）
+  const c = {};
+  rows.forEach(r => { if (r.date) c[r.date] = (c[r.date]||0)+1; });
+  return Object.keys(c).length > 1 ? c : {};   // 只抓單日資料時不畫點，避免誤導
+}
+function renderCal(){
+  const [y,m] = calMonth.split('-').map(Number);
+  $('#mTitle').textContent = y + ' 年 ' + m + ' 月';
+  $('#mPrev').disabled = calMonth <= MIN.slice(0,7);
+  $('#mNext').disabled = calMonth >= MAX.slice(0,7);
+
+  const counts = dayCounts();
+  const first = new Date(y, m-1, 1).getDay();
+  const days  = new Date(y, m, 0).getDate();
+  let html = WK.map((w,i) => `<div class="wd${i===0||i===6?' we':''}">${w[1]}</div>`).join('');
+  for (let i=0;i<first;i++) html += '<button class="day oth" disabled></button>';
+  for (let d=1;d<=days;d++){
+    const ds = y+'-'+pad(m)+'-'+pad(d);
+    const off = ds < MIN || ds > MAX;
+    const cls = ['day', ds===curDate?'sel':'', ds===TODAY?'today':''].filter(Boolean).join(' ');
+    html += `<button class="${cls}" data-d="${ds}" ${off?'disabled':''}>${d}`
+          + (counts[ds] && !off ? '<span class="dot"></span>' : '') + '</button>';
+  }
+  $('#calGrid').innerHTML = html;
+  $('#calGrid').querySelectorAll('.day[data-d]').forEach(b => {
+    b.onclick = () => { goto(b.dataset.d); closeCal(); };
+  });
+  $('#calToday').disabled = curDate === TODAY;
+  $('#calHint').textContent = Object.keys(counts).length
+      ? '有小圓點的日期表示當天有使用紀錄'
+      : '可查詢 ' + MIN.replace(/-/g,'/') + ' ～ ' + MAX.replace(/-/g,'/');
+}
+function openCal(){ calMonth = curDate.slice(0,7); renderCal(); $('#calWrap').classList.add('on'); }
+function closeCal(){ $('#calWrap').classList.remove('on'); }
+
+$('#btnCal').onclick   = openCal;
+$('#calBd').onclick    = closeCal;
+$('#calClose').onclick = closeCal;
+$('#calToday').onclick = () => { goto(TODAY); closeCal(); };
+$('#mPrev').onclick    = () => { calMonth = monthShift(calMonth,-1); renderCal(); };
+$('#mNext').onclick    = () => { calMonth = monthShift(calMonth, 1); renderCal(); };
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCal(); });
+
+/* ---- 事件 ---- */
+function goto(date){
+  if (date < MIN) date = MIN;
+  if (date > MAX) date = MAX;
+  curDate = date;
+  history.replaceState(null,'', location.pathname + '?' +
+    new URLSearchParams(Object.assign(Object.fromEntries(params), {date:curDate})).toString());
+  perDate ? load(false) : render();
+}
+$('#prev').onclick = () => goto(addDays(curDate,-1));
+$('#next').onclick = () => goto(addDays(curDate, 1));
+$('#btnToday').onclick = () => goto(TODAY);
+$('#btnRefresh').onclick = () => load(true);
+$('#q').oninput = e => { query = e.target.value.trim(); render(); };
+document.querySelectorAll('.chip').forEach(b => b.onclick = () => {
+  filter = b.dataset.c;
+  document.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  render();
+});
+// 手機左右滑動換日
+(function(){
+  let x0 = null, y0 = null;
+  document.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive:true});
+  document.addEventListener('touchend', e => {
+    if (x0 == null || $('#calWrap').classList.contains('on')) { x0 = null; return; }
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    if (Math.abs(dx) > 70 && Math.abs(dy) < 50) goto(addDays(curDate, dx < 0 ? 1 : -1));
+    x0 = null;
+  }, {passive:true});
+})();
+if (AUTO_REFRESH_SEC > 0) setInterval(() => load(true), AUTO_REFRESH_SEC * 1000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden && srcUrl) load(true); });
+
+load(false);
+</script>
+</body>
+</html>
