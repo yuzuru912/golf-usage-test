@@ -165,7 +165,16 @@ main{max-width:720px;margin:0 auto;padding:8px 12px 32px}
 .tag.std{color:var(--std);background:var(--std-soft)}
 .tag.dyn{color:var(--dyn);background:var(--dyn-soft)}
 .tag.oth{color:var(--muted);background:var(--bg)}
-.time{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.time{font-size:13px;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.time .dash{color:var(--muted);font-weight:400;margin:0 2px}
+.badge{
+  display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;
+  color:#fff;background:#1f9d55;border-radius:999px;padding:2px 8px 2px 6px;
+}
+.badge i{width:6px;height:6px;border-radius:50%;background:#fff;animation:blink 1.4s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.card.live{border-color:#1f9d55;box-shadow:0 0 0 1px #1f9d55 inset,var(--shadow)}
+.livecnt{color:#1f9d55}
 .phone{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.02em}
 .call{
   flex:none;width:52px;height:52px;border-radius:14px;background:var(--brand-soft);
@@ -298,7 +307,8 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>'
 /* ---- 欄位對照：容許中英文、各種命名 ---- */
 const ALIAS = {
   date : ['date','日期','usedate','使用日期','playdate','reservedate','預約日期','bookingdate','datetime','使用時間','starttime','開始時間','ts','timestamp'],
-  time : ['time','時間','時段','starttime','開始時間','begintime','hour','teetime','開球時間'],
+  time : ['time','時間','時段','starttime','開始時間','begintime','hour','teetime','開球時間','borrowtime','借用時間','入場時間','from','使用起'],
+  end  : ['endtime','end','結束時間','結束','迄','到','至','finishtime','untiltime','timeend','離場時間','歸還時間','to','使用迄'],
   course:['course','球道','type','類型','球道類型','coursetype','coursename','球道名稱','mode','模式','kind','category','分類','lane','field','場地'],
   eid  : ['empid','employeeid','employee_id','empno','employeeno','工號','員工編號','員工工號','人員編號','staffid','staffno','userid','user_id','memberid','no','number','編號','id','jobno','工號碼'],
   name : ['name','姓名','empname','員工姓名','username','使用者','使用者姓名','staffname','member','membername','人員','人員姓名','fullname','使用人'],
@@ -362,16 +372,22 @@ function flatten(json){
     if (!row || typeof row !== 'object') return;
     const rawDate  = pick(row, ALIAS.date);
     const rawTime  = pick(row, ALIAS.time);
+    const rawEnd   = pick(row, ALIAS.end);
     const rawCourse= pick(row, ALIAS.course);
     const date = normDate(rawDate) || inheritDate || '';
     let   time = normTime(rawTime);
+    let   end  = normTime(rawEnd);
     if (!time && rawDate){                          // 日期欄位裡就帶了時間（如 2026-08-20T08:10）
       const hit = String(rawDate).match(/(\d{1,2}):(\d{2})/);
       if (hit) time = normTime(hit[0]);
     }
+    if (!end){                                      // 起訖寫在同一欄，如「08:10~09:40」
+      const m = String(rawTime).match(/(\d{1,2}:\d{2})\s*[~～\-–—－至到]\s*(\d{1,2}:\d{2})/);
+      if (m){ time = normTime(m[1]); end = normTime(m[2]); }
+    }
     const course = rawCourse ? normCourse(rawCourse) : (inheritCourse || 'oth');
     out.push({
-      date, time,
+      date, time, end,
       course,
       courseRaw: rawCourse || (inheritCourse === 'std' ? '標準球道' : inheritCourse === 'dyn' ? '動態球道' : ''),
       eid:   String(pick(row, ALIAS.eid)   || '').trim(),
@@ -487,8 +503,10 @@ function render(){
 
   if ($('#calWrap').classList.contains('on')) renderCal();
 
-  $('#count').textContent = list.length
+  const nLive = base.filter(isActive).length;
+  $('#count').innerHTML = list.length
       ? '共 ' + list.length + ' 位使用者' + (filter==='all' ? '（標準 '+cStd+'・動態 '+cDyn+'）' : '')
+        + (nLive ? ' <b class="livecnt">・目前使用中 ' + nLive + ' 位</b>' : '')
       : '';
 
   $('#list').innerHTML = list.length ? list.map(card).join('') : `
@@ -500,19 +518,29 @@ function render(){
       (srcUrl ? '資料已更新 ' + pad(lastLoad.getHours()) + ':' + pad(lastLoad.getMinutes()) : '');
   $('#foot').textContent = '可查詢範圍：' + MIN.replace(/-/g,'/') + " ～ " + MAX.replace(/-/g,'/');
 }
+function nowHM(){ const d = new Date(); return pad(d.getHours())+':'+pad(d.getMinutes()); }
+function isActive(r){
+  return curDate === TODAY && r.time && r.end && r.time <= nowHM() && nowHM() <= r.end;
+}
+function slot(r){
+  if (!r.time) return '';
+  return r.end ? r.time + '<span class="dash">～</span>' + r.end : r.time;
+}
 function card(r){
   const digits = r.phone.replace(/[^\d+]/g,'');
   const cls = r.course;
+  const act = isActive(r);
   return `
-  <div class="card ${cls}">
+  <div class="card ${cls}${act?' live':''}">
     <div class="info">
       <div class="line1">
         <span class="name">${esc(r.name || '（未填姓名）')}</span>
         ${r.eid ? `<span class="eid">${esc(r.eid)}</span>` : ''}
+        ${act ? '<span class="badge"><i></i>使用中</span>' : ''}
       </div>
       <div class="line2">
         <span class="tag ${cls}">${esc(courseLabel(cls, r.courseRaw))}</span>
-        ${r.time ? `<span class="time">${esc(r.time)}</span>` : ''}
+        ${r.time ? `<span class="time">${slot(r)}</span>` : ''}
         ${r.phone ? `<span class="phone">${esc(r.phone)}</span>` : '<span class="phone">無電話</span>'}
       </div>
     </div>
@@ -604,6 +632,7 @@ document.querySelectorAll('.chip').forEach(b => b.onclick = () => {
     x0 = null;
   }, {passive:true});
 })();
+setInterval(() => { if (curDate === TODAY) render(); }, 60000);   // 每分鐘更新「使用中」狀態
 if (AUTO_REFRESH_SEC > 0) setInterval(() => load(true), AUTO_REFRESH_SEC * 1000);
 document.addEventListener('visibilitychange', () => { if (!document.hidden && srcUrl) load(true); });
 
