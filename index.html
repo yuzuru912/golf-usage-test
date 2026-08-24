@@ -6,7 +6,9 @@
 <meta name="theme-color" content="#0f5132">
 <title>高爾夫球場使用狀況</title>
 <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png"><link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="manifest" href="manifest.json">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="球場使用">
@@ -262,30 +264,11 @@ main{max-width:720px;margin:0 auto;padding:8px 12px 32px}
 <div class="foot" id="foot"></div>
 
 <script>
-/* =====================================================================
-   ★★★ 設定區：只要改這裡 ★★★
-   ---------------------------------------------------------------------
-   DATA_URL：高爾夫球網站輸出 JSON 的固定網址。
-     · 若網址可帶日期參數，請用 {date} 當佔位符，程式會自動換成 2026-08-20 格式，
-       例：'https://golf.example.com/api/usage?date={date}'
-     · 若網址一次回傳整批資料（含多天），就不要放 {date}，程式會自行依日期篩選，
-       例：'https://golf.example.com/api/usage.json'
-   也可以不改檔案，直接在網址後面加參數覆寫來源（方便測試 / 給不同人用）：
-       你的頁面.html?src=https%3A%2F%2Fgolf.example.com%2Fapi%2Fusage.json
-   ---------------------------------------------------------------------
-   注意：JSON 來源伺服器需允許跨網域讀取，
-   即回應標頭要有 Access-Control-Allow-Origin: *
-   （若把本檔案放在跟 JSON 同一台伺服器，就不需要處理這個。）
-   ===================================================================== */
-const DATA_URL   = 'usage-sample.json';   // ← 同資料夾的 JSON（GitHub Pages 測試用）
-const RANGE_DAYS = 31;          // 可查詢前後天數（約一個月）
-const AUTO_REFRESH_SEC = 0;     // 設為 60 可每分鐘自動更新；0 = 關閉
 
-/* ===================== 以下不需要修改 ===================== */
+const DATA_URL        = '';   // ← 填入 API 網址，例：'https://example.com/api/usage?date={date}'
+const RANGE_DAYS      = 31;   // 可查詢前後天數
+const AUTO_REFRESH_SEC = 0;   // 設為 60 可每分鐘自動更新；0 = 關閉
 
-/* ---- 示範資料（DATA_URL 沒填或抓取失敗時使用，方便先看版面） ---- */
-
-/* ---- 小工具 ---- */
 const $ = s => document.querySelector(s);
 const pad = n => String(n).padStart(2,'0');
 const ymd = d => d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
@@ -294,175 +277,80 @@ const addDays = (s,k) => { const d = parseYmd(s); d.setDate(d.getDate()+k); retu
 const WK = ['週日','週一','週二','週三','週四','週五','週六'];
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-/* ---- 欄位對照：容許中英文、各種命名 ---- */
-const ALIAS = {
-  date : ['date','日期','usedate','使用日期','playdate','reservedate','預約日期','bookingdate','datetime','使用時間','starttime','開始時間','ts','timestamp'],
-  time : ['time','時間','時段','starttime','開始時間','begintime','hour','teetime','開球時間','borrowtime','借用時間','入場時間','from','使用起'],
-  end  : ['endtime','end','結束時間','結束','迄','到','至','finishtime','untiltime','timeend','離場時間','歸還時間','to','使用迄'],
-  course:['course','球道','type','類型','球道類型','coursetype','coursename','球道名稱','mode','模式','kind','category','分類','lane','field','場地'],
-  eid  : ['empid','employeeid','employee_id','empno','employeeno','工號','員工編號','員工工號','人員編號','staffid','staffno','userid','user_id','memberid','no','number','編號','id','jobno','工號碼'],
-  name : ['name','姓名','empname','員工姓名','username','使用者','使用者姓名','staffname','member','membername','人員','人員姓名','fullname','使用人'],
-  phone: ['phone','mobile','手機','電話','手機號碼','聯絡電話','行動電話','tel','telephone','cellphone','cell','contact','聯絡方式','msisdn']
-};
-function pick(obj, keys){
-  // 建立小寫、去空白/底線/連字號 的鍵值索引
-  const map = {};
-  for (const k in obj){
-    map[String(k).toLowerCase().replace(/[\s_\-]/g,'')] = obj[k];
-  }
-  for (const want of keys){
-    const w = want.toLowerCase().replace(/[\s_\-]/g,'');
-    if (map[w] !== undefined && map[w] !== null && String(map[w]).trim() !== '') return map[w];
-  }
-  return '';
-}
-
-/* ---- 日期 / 時間 解析 ---- */
-function normDate(v){
-  if (v === '' || v == null) return '';
-  if (v instanceof Date) return ymd(v);
-  let s = String(v).trim();
-  let m = s.match(/(\d{4})[-\/年.](\d{1,2})[-\/月.](\d{1,2})/);
-  if (m) return m[1]+'-'+pad(+m[2])+'-'+pad(+m[3]);
-  m = s.match(/^(\d{4})(\d{2})(\d{2})/);            // 20260820
-  if (m) return m[1]+'-'+m[2]+'-'+m[3];
-  m = s.match(/^(\d{2,3})[-\/](\d{1,2})[-\/](\d{1,2})/); // 民國 115/08/20
-  if (m) return (Number(m[1])+1911)+'-'+pad(+m[2])+'-'+pad(+m[3]);
-  const d = new Date(s);
-  return isNaN(d) ? '' : ymd(d);
-}
-function normTime(v){
-  if (v === '' || v == null) return '';
-  const s = String(v).trim();
-  let m = s.match(/(\d{1,2}):(\d{2})/);             // 08:10 / 2026-08-20 08:10
-  if (m && +m[1] < 24) return pad(+m[1])+':'+m[2];
-  m = s.match(/^(\d{1,2})\s*[點点時时]\s*(\d{1,2})?/); // 8點30
-  if (m && +m[1] < 24) return pad(+m[1])+':'+pad(+(m[2]||0));
-  m = s.match(/^([01]\d|2[0-3])([0-5]\d)$/);        // 0810
-  if (m) return m[1]+':'+m[2];
-  if (/^\d/.test(s)) return '';                     // 看起來是日期或流水號，不當時間
-  return s.length <= 10 ? s : '';                   // 例如「上午時段」
-}
-function normCourse(v){
-  const s = String(v == null ? '' : v);
-  if (/動態|dynamic|dyn|模擬|simulat/i.test(s)) return 'dyn';
-  if (/標準|standard|std|正規|一般|real/i.test(s)) return 'std';
-  return 'oth';
-}
-function courseLabel(c, raw){
-  if (c === 'std') return '標準球道';
-  if (c === 'dyn') return '動態球道';
-  return String(raw || '其他').slice(0,10) || '其他';
-}
-
-/* ---- 將任意 JSON 攤平成統一的紀錄陣列 ---- */
-function flatten(json){
-  const out = [];
-  const push = (row, inheritDate, inheritCourse) => {
-    if (!row || typeof row !== 'object') return;
-    const rawDate  = pick(row, ALIAS.date);
-    const rawTime  = pick(row, ALIAS.time);
-    const rawEnd   = pick(row, ALIAS.end);
-    const rawCourse= pick(row, ALIAS.course);
-    const date = normDate(rawDate) || inheritDate || '';
-    let   time = normTime(rawTime);
-    let   end  = normTime(rawEnd);
-    if (!time && rawDate){                          // 日期欄位裡就帶了時間（如 2026-08-20T08:10）
-      const hit = String(rawDate).match(/(\d{1,2}):(\d{2})/);
-      if (hit) time = normTime(hit[0]);
-    }
-    if (!end){                                      // 起訖寫在同一欄，如「08:10~09:40」
-      const m = String(rawTime).match(/(\d{1,2}:\d{2})\s*[~～\-–—－至到]\s*(\d{1,2}:\d{2})/);
-      if (m){ time = normTime(m[1]); end = normTime(m[2]); }
-    }
-    const course = rawCourse ? normCourse(rawCourse) : (inheritCourse || 'oth');
-    out.push({
-      date, time, end,
-      course,
-      courseRaw: rawCourse || (inheritCourse === 'std' ? '標準球道' : inheritCourse === 'dyn' ? '動態球道' : ''),
-      eid:   String(pick(row, ALIAS.eid)   || '').trim(),
-      name:  String(pick(row, ALIAS.name)  || '').trim(),
-      phone: String(pick(row, ALIAS.phone) || '').trim()
-    });
-  };
-  const walk = (node, inhDate, inhCourse) => {
-    if (Array.isArray(node)) { node.forEach(r => Array.isArray(r) ? walk(r, inhDate, inhCourse) : push(r, inhDate, inhCourse)); return; }
-    if (!node || typeof node !== 'object') return;
-    // 常見包裝
-    for (const k of ['data','records','result','results','rows','list','items','users','players','usage','content']){
-      if (node[k] !== undefined) { walk(node[k], inhDate, inhCourse); return; }
-    }
-    // 以日期或球道為 key 的物件
-    let handled = false;
-    for (const k in node){
-      const v = node[k];
-      if (!v || typeof v !== 'object') continue;
-      const asDate = normDate(k);
-      const asCourse = /標準|動態|standard|dynamic/i.test(k) ? normCourse(k) : null;
-      if (asDate || asCourse){ walk(v, asDate || inhDate, asCourse || inhCourse); handled = true; }
-    }
-    if (!handled) push(node, inhDate, inhCourse);
-  };
-  walk(json, '', null);
-  return out.filter(r => r.eid || r.name || r.phone);
-}
 
 /* ---- 狀態 ---- */
 const params  = new URLSearchParams(location.search);
-const srcUrl  = (params.get('src') || DATA_URL || '').trim();
-const perDate = /\{date\}/i.test(srcUrl);
+/* ---- 查詢限制 ---- */
 const TODAY   = ymd(new Date());
 const MIN     = addDays(TODAY, -RANGE_DAYS);
 const MAX     = addDays(TODAY,  RANGE_DAYS);
 
 let curDate = (function(){
-  const q = normDate(params.get('date') || '');
-  return (q && q >= MIN && q <= MAX) ? q : TODAY;
+  const q = (params.get('date') || '').trim();
+  return (q && /^\d{4}-\d{2}-\d{2}$/.test(q) && q >= MIN && q <= MAX) ? q : TODAY;
 })();
 let filter = 'all';
 let query  = '';
-let rows   = [];          // 目前日期可用的全部紀錄
-let usingDemo = false;
+let rows   = [];
 let lastLoad = null;
-const cache = new Map();  // key -> 紀錄陣列
+const cache = new Map();
+const srcUrl = (params.get('src') || DATA_URL || '').trim();
 
 /* ---- 讀取資料 ---- */
 async function load(force){
-  const key = perDate ? curDate : '__all__';
+  const key = '__all__';
   if (!force && cache.has(key)) { rows = cache.get(key); render(); return; }
 
   setLoading(true);
   let data = null, err = null;
   if (srcUrl){
     try{
-      const url = perDate ? srcUrl.replace(/\{date\}/ig, curDate) : srcUrl;
+      const url = srcUrl;
       const res = await fetch(url + (url.includes('?') ? '&' : '?') + '_t=' + Date.now(), {cache:'no-store'});
       if (!res.ok) throw new Error('HTTP ' + res.status);
-      const txt = await res.text();
-      data = JSON.parse(txt);
+      data = await res.json();
     }catch(e){ err = e; }
   }
   if (data == null){
-    usingDemo = true;
-    rows = flatten(DEMO);
-    $('#notice').innerHTML = '<div class="note">' +
-      (srcUrl ? '無法連線到資料來源（' + esc(err ? err.message : '未知錯誤') + '），目前顯示的是<b>示範資料</b>。'
-              : '尚未設定 JSON 來源網址，目前顯示的是<b>示範資料</b>。請在檔案設定區填入 DATA_URL，或在網址後加上 <code>?src=你的JSON網址</code>。') +
-      '</div>';
+  $('#notice').innerHTML = '<div class="note">' +
+    (srcUrl ? '無法連線到資料來源（' + esc(err ? err.message : '未知錯誤') + '），請稍後再試。'
+            : '尚未設定 API 網址，請在設定區填入 DATA_URL。') +
+    '</div>';
+    rows = [];
   } else {
-    usingDemo = false;
     $('#notice').innerHTML = '';
-    rows = flatten(data);
+    rows = parseRows(data);
   }
   cache.set(key, rows);
   lastLoad = new Date();
   setLoading(false);
   render();
 }
+
+
+
 function setLoading(on){
   $('#btnRefresh').classList.toggle('spin', on);
   if (on) $('#list').innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div>';
 }
+
+
+const normCourse = v => v === 'dynamic' ? 'dyn' : v === 'standard' ? 'std' : 'oth';
+
+/* ---- 抓資料 ---- */
+function parseRows(json){
+  return (json.data || []).map(row => ({
+    date:      row.date      || '',
+    time:      row.startTime ? row.startTime.slice(0,5) : '',
+    end:       row.endTime   ? row.endTime.slice(0,5)   : '',
+    course:    normCourse(row.course),
+    eid:       String(row.empId || '').trim(),
+    name:      String(row.name  || '').trim(),
+    phone:     String(row.phone || '').trim()
+  }));
+}
+
+
 
 /* ---- 篩選與繪製 ---- */
 function todaysRows(){
@@ -504,8 +392,9 @@ function render(){
       <div>這一天${filter==='std'?'標準球道':filter==='dyn'?'動態球道':''}沒有使用紀錄</div>
     </div>`;
 
-  $('#srcNote').textContent = usingDemo ? '示範資料' :
-      (srcUrl ? '資料已更新 ' + pad(lastLoad.getHours()) + ':' + pad(lastLoad.getMinutes()) : '');
+  $('#srcNote').textContent = lastLoad
+    ? '資料已更新 ' + pad(lastLoad.getHours()) + ':' + pad(lastLoad.getMinutes())
+    : '';
   $('#foot').textContent = '可查詢範圍：' + MIN.replace(/-/g,'/') + " ～ " + MAX.replace(/-/g,'/');
 }
 function nowHM(){ const d = new Date(); return pad(d.getHours())+':'+pad(d.getMinutes()); }
@@ -529,7 +418,7 @@ function card(r){
         ${act ? '<span class="badge"><i></i>使用中</span>' : ''}
       </div>
       <div class="line2">
-        <span class="tag ${cls}">${esc(courseLabel(cls, r.courseRaw))}</span>
+        <span class="tag ${cls}">${cls === 'std' ? '標準球道' : '動態球道'}</span>
         ${r.time ? `<span class="time">${slot(r)}</span>` : ''}
         ${r.phone ? `<span class="phone">${esc(r.phone)}</span>` : '<span class="phone">無電話</span>'}
       </div>
@@ -599,7 +488,7 @@ function goto(date){
   curDate = date;
   history.replaceState(null,'', location.pathname + '?' +
     new URLSearchParams(Object.assign(Object.fromEntries(params), {date:curDate})).toString());
-  perDate ? load(false) : render();
+  load(false);
 }
 $('#prev').onclick = () => goto(addDays(curDate,-1));
 $('#next').onclick = () => goto(addDays(curDate, 1));
