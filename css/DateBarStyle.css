@@ -1,0 +1,81 @@
+/* ---- 外層白色圓角卡片 ---- */
+.date-bar-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e3e8ef;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* 文字群組：強制同行不換行 */
+.date-text-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.date-text-group .main-date {
+  font-size: 16px;
+  font-weight: 700;
+  color: #15201B;
+}
+
+.date-text-group .sub-date {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ---- 右側獨立 SVG 圓形按鈕 ---- */
+.btn-date-trigger {
+  /* 徹底清除舊樣式與絕對定位 */
+  position: static !important;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  
+  /* 圓形綠色背景設定 */
+  background-color: #E6F0EA !important;
+  border: none !important;
+  border-radius: 50% !important;
+  cursor: pointer;
+  
+  /* 置中 SVG */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+/* 清除 ::after 舊圓點 */
+.btn-date-trigger::after {
+  display: none !important;
+}
+
+/* SVG 本體樣式重置 */
+.btn-date-trigger svg {
+  position: static !important;
+  transform: none !important;
+  width: 18px !important;
+  height: 18px !important;
+  color: #1C5132 !important;
+  transition: all 0.2s ease;
+}
+
+/* Hover 點擊效果：背景變墨綠，圖示變白 */
+.btn-date-trigger:hover,
+.btn-date-trigger:focus-visible {
+  background-color: #1C5132 !important;
+  transform: scale(1.08);
+  outline: none;
+}
+
+.btn-date-trigger:hover svg,
+.btn-date-trigger:focus-visible svg {
+  color: #ffffff !important;
+}

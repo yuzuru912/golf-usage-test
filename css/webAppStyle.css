@@ -1,0 +1,114 @@
+/* ============================================================
+   1. 全域變數與重設
+   ============================================================ */
+:root {
+  --brand-green: #1C5132;        /* 品牌深綠色 */
+  --bg-cream: #F4F6F5;           /* 內容米白色 */
+  --max-content-width: 420px;    /* 手機模式最大限制寬度 */
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* 消除點擊高亮藍框 */
+}
+
+/* 鎖死深綠背景，徹底解決 iOS 上下滑動與狀態列白邊 */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--brand-green) !important;
+  width: 100%;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom) !important;
+}
+
+.bg-cream {
+  background-color: var(--bg-cream) !important;
+}
+
+/* ============================================================
+   2. Header 吸頂與 iOS 安全區防遮擋
+   ============================================================ */
+header, 
+header.header-custom, 
+.navbar, 
+.top-bar {
+  margin: 0 !important;
+  background-color: var(--brand-green) !important;
+  top: 0;
+  padding-top: max(12px, env(safe-area-inset-top)) !important;
+  padding-bottom: 12px !important;
+  width: 100%;
+  z-index: 1030;
+}
+
+header .header-content {
+  width: 100% !important;
+  max-width: var(--max-content-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* ============================================================
+   3. 頁面主體容器
+   ============================================================ */
+#app, main, .app-container, .wrap, .container {
+  background-color: var(--bg-cream);
+  min-height: calc(100vh - 60px);
+  width: 100% !important;
+  max-width: var(--max-content-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* ============================================================
+   4. 元件樣式修正
+   ============================================================ */
+#notice .note {
+  display: block;
+  border: 1px solid #dd1c1c;
+  color: #dd1c1c !important;
+  background-color: #fff0f0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  text-align: left;
+  word-break: break-word;
+}
+
+#calModal .modal-dialog {
+  width: 320px !important;
+  max-width: 90vw !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* 讓閒置彈窗與日曆彈窗尺寸、置中設定一致 */
+#idleModal .modal-dialog {
+  width: 320px !important;
+  max-width: 90vw !important;
+  margin: 1.75rem auto !important;
+}
+
+/* 統一彈窗內頁樣式 (圓角與邊框) */
+#idleModal .modal-content {
+  border: none !important;
+  border-radius: 1rem !important; /* 與 calModal rounded-4 一致 */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+#idleModal {
+  z-index: 1085 !important; /* 一般 Bootstrap Modal 為 1055，這裡強制設更高 */
+}
+
+.modal-backdrop.idle-backdrop {
+  z-index: 1080 !important;
+}
+

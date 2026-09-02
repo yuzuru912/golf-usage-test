@@ -5,518 +5,122 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f5132">
 <title>高爾夫球場使用狀況</title>
-<link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="manifest" href="manifest.json">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/card.css">
+<link rel="stylesheet" href="css/webAppStyle.css">
+<link rel="stylesheet" href="css/buttonStyle.css">
+<link rel="stylesheet" href="css/DateBarStyle.css">
+<link rel="apple-touch-icon" sizes="180x180" href="Img\icon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Img\icon-32.png">
+<link rel="icon" href="Img\favicon.ico" sizes="any">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="球場使用">
 <meta name="mobile-web-app-capable" content="yes">
-<style>
-:root{
-  --bg:#f4f6f5; --card:#ffffff; --ink:#15201b; --muted:#6b7d74;
-  --line:#e2e8e5; --brand:#0f5132; --brand-soft:#e6f0ea;
-  --std:#1d6fb8; --std-soft:#e5f0fa;
-  --dyn:#b8541d; --dyn-soft:#fbeee5;
-  --we:#c0392b;
-  --shadow:0 1px 2px rgba(16,32,24,.06),0 4px 14px rgba(16,32,24,.05);
-}
-@media (prefers-color-scheme:dark){
-  :root{
-    --bg:#101613; --card:#18211d; --ink:#e8efeb; --muted:#93a69c;
-    --line:#26332d; --brand:#4ea87a; --brand-soft:#1b2b23;
-    --std:#67aeea; --std-soft:#152532;
-    --dyn:#e8a06a; --dyn-soft:#2c2018;
-    --we:#e78b84;
-    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
-  }
-}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;padding:0}
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
-  background:var(--bg); color:var(--ink); font-size:16px; line-height:1.5;
-  padding-bottom:env(safe-area-inset-bottom);
-}
-.wrap{max-width:720px;margin:0 auto}
-
-/* ---------- header ---------- */
-header{
-  position:sticky; top:0; z-index:20; background:var(--brand); color:#fff;
-  padding:calc(env(safe-area-inset-top) + 12px) 16px 12px;
-}
-.hrow{display:flex;align-items:center;gap:10px;max-width:720px;margin:0 auto}
-.htitle{font-size:17px;font-weight:700;letter-spacing:.02em;flex:1;margin:0}
-.hsub{font-size:12px;opacity:.8;font-weight:400;display:block;margin-top:1px}
-.iconbtn{
-  border:0;background:rgba(255,255,255,.16);color:#fff;width:38px;height:38px;
-  border-radius:10px;font-size:17px;display:grid;place-items:center;cursor:pointer;flex:none;
-}
-.iconbtn:active{background:rgba(255,255,255,.3)}
-.iconbtn.spin svg{animation:sp .8s linear infinite}
-@keyframes sp{to{transform:rotate(360deg)}}
-
-/* ---------- date bar ---------- */
-.datebar{
-  position:sticky; top:0; z-index:15; background:var(--card);
-  border-bottom:1px solid var(--line); padding:10px 12px;
-}
-.dinner{display:flex;align-items:center;gap:8px;max-width:720px;margin:0 auto}
-.nav{
-  width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
-  background:var(--bg);color:var(--ink);font-size:20px;line-height:1;cursor:pointer;flex:none;
-  display:grid;place-items:center;
-}
-.nav:disabled{opacity:.3;cursor:default}
-.dcenter{
-  flex:1;min-width:0;position:relative;background:none;border:0;padding:4px 2px;
-  color:var(--ink);font:inherit;cursor:pointer;border-radius:12px;
-}
-.dcenter:active{background:var(--bg)}
-.dlabel{font-size:18px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-  display:flex;align-items:center;justify-content:center;gap:6px}
-.dlabel svg{flex:none;opacity:.5}
-.dweek{font-size:12px;color:var(--muted);margin-top:-2px}
-
-/* ---------- 日曆 ---------- */
-.calwrap{position:fixed;inset:0;z-index:40;display:none}
-.calwrap.on{display:block}
-.calbd{position:absolute;inset:0;background:rgba(8,16,12,.45);animation:fade .15s ease}
-@keyframes fade{from{opacity:0}}
-.cal{
-  position:absolute;left:50%;transform:translateX(-50%);top:calc(env(safe-area-inset-top) + 118px);
-  width:min(360px,calc(100vw - 24px));background:var(--card);border:1px solid var(--line);
-  border-radius:18px;box-shadow:0 12px 40px rgba(8,16,12,.28);padding:12px 12px 14px;
-  animation:pop .16s cubic-bezier(.2,.9,.3,1.1);
-}
-@keyframes pop{from{opacity:0;transform:translateX(-50%) translateY(-8px) scale(.97)}}
-.calhead{display:flex;align-items:center;gap:6px;margin-bottom:8px}
-.calhead .mt{flex:1;text-align:center;font-size:16px;font-weight:700}
-.mbtn{
-  width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:var(--bg);
-  color:var(--ink);font-size:18px;line-height:1;cursor:pointer;display:grid;place-items:center;flex:none;
-}
-.mbtn:disabled{opacity:.3;cursor:default}
-.calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
-.wd{text-align:center;font-size:11px;color:var(--muted);font-weight:700;padding:4px 0 6px}
-.wd.we{color:var(--we)}
-.day{
-  position:relative;aspect-ratio:1/1;border:0;background:none;border-radius:11px;
-  color:var(--ink);font-size:15px;font-weight:600;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums;
-}
-.day:disabled{color:var(--line);cursor:default}
-.day.oth{visibility:hidden}
-.day.today{box-shadow:inset 0 0 0 2px var(--brand)}
-.day.sel{background:var(--brand);color:#fff}
-.day .dot{
-  position:absolute;bottom:6px;left:50%;transform:translateX(-50%);
-  width:5px;height:5px;border-radius:50%;background:var(--brand);
-}
-.day.sel .dot{background:#fff}
-.calfoot{display:flex;gap:8px;margin-top:10px}
-.calfoot button{
-  flex:1;height:40px;border-radius:11px;border:1px solid var(--line);background:var(--bg);
-  color:var(--ink);font-size:14px;font-weight:600;cursor:pointer;
-}
-.calfoot .go{background:var(--brand);border-color:var(--brand);color:#fff}
-.calfoot button:disabled{opacity:.35}
-.calhint{font-size:11px;color:var(--muted);text-align:center;margin-top:8px}
-.today{
-  border:1px solid var(--line);background:var(--bg);color:var(--brand);font-weight:600;
-  border-radius:12px;height:44px;padding:0 12px;font-size:14px;cursor:pointer;flex:none;
-}
-.today:disabled{opacity:.35}
-
-/* ---------- filters ---------- */
-.tools{max-width:720px;margin:0 auto;padding:12px 12px 4px}
-.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
-.chips::-webkit-scrollbar{display:none}
-.chip{
-  border:1px solid var(--line);background:var(--card);color:var(--ink);
-  border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;
-  white-space:nowrap;cursor:pointer;display:flex;align-items:center;gap:6px;
-}
-.chip .n{font-size:12px;font-weight:700;opacity:.65}
-.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
-.chip[aria-pressed="true"] .n{opacity:.85}
-.chip.std[aria-pressed="true"]{background:var(--std);border-color:var(--std)}
-.chip.dyn[aria-pressed="true"]{background:var(--dyn);border-color:var(--dyn)}
-.search{
-  margin-top:10px;width:100%;border:1px solid var(--line);background:var(--card);color:var(--ink);
-  border-radius:12px;padding:11px 14px;font-size:16px;
-}
-.search::placeholder{color:var(--muted)}
-
-/* ---------- list ---------- */
-main{max-width:720px;margin:0 auto;padding:8px 12px 32px}
-.count{font-size:13px;color:var(--muted);padding:6px 4px 10px}
-.card{
-  background:var(--card);border:1px solid var(--line);border-radius:14px;
-  box-shadow:var(--shadow);padding:12px 12px 12px 14px;margin-bottom:10px;
-  display:flex;align-items:center;gap:12px;position:relative;overflow:hidden;
-}
-.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--muted)}
-.card.std::before{background:var(--std)}
-.card.dyn::before{background:var(--dyn)}
-.info{flex:1;min-width:0}
-.line1{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
-.name{font-size:18px;font-weight:700;letter-spacing:.02em}
-.eid{
-  font-size:12px;font-weight:700;color:var(--muted);background:var(--bg);
-  border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-variant-numeric:tabular-nums;
-}
-.line2{display:flex;align-items:center;gap:8px;margin-top:5px;flex-wrap:wrap}
-.tag{font-size:12px;font-weight:700;border-radius:6px;padding:2px 8px}
-.tag.std{color:var(--std);background:var(--std-soft)}
-.tag.dyn{color:var(--dyn);background:var(--dyn-soft)}
-.tag.oth{color:var(--muted);background:var(--bg)}
-.time{font-size:13px;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:.01em}
-.time .dash{color:var(--muted);font-weight:400;margin:0 2px}
-.badge{
-  display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;
-  color:#fff;background:#1f9d55;border-radius:999px;padding:2px 8px 2px 6px;
-}
-.badge i{width:6px;height:6px;border-radius:50%;background:#fff;animation:blink 1.4s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-.card.live{border-color:#1f9d55;box-shadow:0 0 0 1px #1f9d55 inset,var(--shadow)}
-.livecnt{color:#1f9d55}
-.phone{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.02em}
-.call{
-  flex:none;width:52px;height:52px;border-radius:14px;background:var(--brand-soft);
-  color:var(--brand);display:grid;place-items:center;text-decoration:none;border:1px solid transparent;
-}
-.call:active{background:var(--brand);color:#fff}
-.call.off{background:var(--bg);color:var(--line);pointer-events:none}
-
-.empty{text-align:center;color:var(--muted);padding:56px 20px}
-.empty .big{font-size:40px;margin-bottom:8px;opacity:.5}
-.note{
-  font-size:13px;border-radius:12px;padding:10px 12px;margin:0 0 12px;
-  background:var(--dyn-soft);color:var(--dyn);border:1px solid rgba(0,0,0,.05);
-}
-.foot{max-width:720px;margin:0 auto;padding:4px 16px 28px;font-size:12px;color:var(--muted);text-align:center}
-.sk{height:76px;border-radius:14px;background:var(--card);border:1px solid var(--line);margin-bottom:10px;
-    animation:pulse 1.2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-</style>
 </head>
-<body>
-
-<header>
-  <div class="hrow">
-    <div style="flex:1;min-width:0">
-      <h1 class="htitle">高爾夫球場使用狀況<span class="hsub" id="srcNote">載入中…</span></h1>
+<body class="bg-cream text-dark">
+<header class="sticky-top text-white shadow-sm py-3 header-custom">  
+  <div class="header-content d-flex align-items-center justify-content-between">
+    <div>
+      <h1 class="fs-5 fw-bold m-0">⛳ 志聖高爾夫球場</h1>
+          <small class="opacity-75" style="font-weight: normal; font-size: 12px;" id="srcNote">資料已更新 --:--</small>
+      </div>
+   <div class="d-flex align-items-center gap-2">
+      <button class="btn btn-light btn-sm rounded-3" id="btnRefresh" aria-label="重新整理">
+        <i class="fa-solid fa-rotate"></i>
+      </button>
     </div>
-    <button class="iconbtn" id="btnRefresh" title="重新整理" aria-label="重新整理">
-      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
-    </button>
   </div>
 </header>
 
-<div class="datebar">
-  <div class="dinner">
-    <button class="nav" id="prev" aria-label="前一天">‹</button>
-    <button class="dcenter" id="btnCal" aria-label="開啟日曆選擇日期" aria-haspopup="dialog">
-      <div class="dlabel"><span id="dLabel">—</span>
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+<main class="app-container my-3">
+
+
+  
+<div class="date-bar-wrapper mb-3">
+  <!-- 左側文字區 -->
+  <div class="date-text-group">
+    <span class="main-date" id="dLabel"></span>
+    <span class="sub-date" id="dWeek"></span>
+  </div>
+
+  <!-- 右側獨立小按鈕 -->
+  <button type="button" class="btn-date-trigger" id="btnCal"
+    data-bs-toggle="modal" data-bs-target="#calModal"
+    aria-label="選擇查詢日期">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="5" width="18" height="16" rx="3"/>
+      <path d="M8 3v4M16 3v4M3 10h18"/>
+    </svg>
+  </button>
+</div>
+
+
+
+<div class="modal fade" id="idleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered cal-modal-width">
+    <div class="modal-content text-center p-3">
+      <div class="modal-body">
+        <div class="fs-1 mb-2">⏱️</div>
+        <h5 class="modal-title mb-2">頁面已閒置過久</h5>
+        <p class="text-secondary mb-3">為了確保資料準確，系統將在您關閉此提示後重新整理頁面。</p>
+        <button type="button" id="btnIdleReload" class="button-timer">確定並刷新</button>
       </div>
-      <div class="dweek" id="dWeek">—</div>
-    </button>
-    <button class="nav" id="next" aria-label="後一天">›</button>
-    <button class="today" id="btnToday">今天</button>
-  </div>
-</div>
-
-<div class="calwrap" id="calWrap" role="dialog" aria-modal="true" aria-label="選擇日期">
-  <div class="calbd" id="calBd"></div>
-  <div class="cal">
-    <div class="calhead">
-      <button class="mbtn" id="mPrev" aria-label="上個月">‹</button>
-      <div class="mt" id="mTitle">—</div>
-      <button class="mbtn" id="mNext" aria-label="下個月">›</button>
     </div>
-    <div class="calgrid" id="calGrid"></div>
-    <div class="calfoot">
-      <button id="calToday">回到今天</button>
-      <button class="go" id="calClose">關閉</button>
+  </div>
+</div>
+
+  <!-- 球道選擇與搜尋 (移除 container-sm) -->
+  <div class="mb-3">
+    <div class="d-flex gap-2 overflow-x-auto pb-2" style="scrollbar-width: none;" role="group">
+      <input type="radio" class="btn-check" name="course" id="btn-all" value="all" autocomplete="off" checked>
+      <label class="chip chip-all text-nowrap" for="btn-all">全部&nbsp;<span class="fw-bold" id="nAll">0</span></label>
+
+      <input type="radio" class="btn-check" name="course" id="btn-std" value="std" autocomplete="off">
+      <label class="chip chip-std text-nowrap" for="btn-std">標準球道&nbsp;<span class="fw-bold" id="nStd">0</span></label>
+
+      <input type="radio" class="btn-check" name="course" id="btn-dyn" value="dyn" autocomplete="off">
+      <label class="chip chip-dyn text-nowrap" for="btn-dyn">動態球道&nbsp;<span class="fw-bold" id="nDyn">0</span></label>
     </div>
-    <div class="calhint" id="calHint"></div>
+    
+    <input class="search form-control rounded-4 mt-2" id="q" type="search" placeholder="搜尋工號或姓名…" autocomplete="off">
   </div>
-</div>
 
-<div class="tools">
-  <div class="chips">
-    <button class="chip all" data-c="all" aria-pressed="true">全部 <span class="n" id="nAll">0</span></button>
-    <button class="chip std" data-c="std" aria-pressed="false">標準球道 <span class="n" id="nStd">0</span></button>
-    <button class="chip dyn" data-c="dyn" aria-pressed="false">動態球道 <span class="n" id="nDyn">0</span></button>
-    <button class="chip dyn" data-c="dyn" aria-pressed="false">AA球道 <span class="n" id="nDyn">0</span></button>
-  </div>
-  <input class="search" id="q" type="search" placeholder="搜尋工號或姓名…" autocomplete="off">
-</div>
-
-<main>
-  <div id="notice"></div>
+  <div class="mb-2" id="notice"></div>
   <div class="count" id="count"></div>
   <div id="list"></div>
 </main>
 
-<div class="foot" id="foot"></div>
-
-<script>
-
-const DATA_URL        = 'usage-sample.json';  // ← 填入 API 網址，例：'https://example.com/api/usage?date={date}'
-const RANGE_DAYS      = 31;   // 可查詢前後天數
-const AUTO_REFRESH_SEC = 0;   // 設為 60 可每分鐘自動更新；0 = 關閉
-
-const $ = s => document.querySelector(s);
-const pad = n => String(n).padStart(2,'0');
-const ymd = d => d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
-const parseYmd = s => { const [y,m,dd] = s.split('-').map(Number); return new Date(y, m-1, dd); };
-const addDays = (s,k) => { const d = parseYmd(s); d.setDate(d.getDate()+k); return ymd(d); };
-const WK = ['週日','週一','週二','週三','週四','週五','週六'];
-const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-
-
-/* ---- 狀態 ---- */
-const params  = new URLSearchParams(location.search);
-/* ---- 查詢限制 ---- */
-const TODAY   = ymd(new Date());
-const MIN     = addDays(TODAY, -RANGE_DAYS);
-const MAX     = addDays(TODAY,  RANGE_DAYS);
-
-let curDate = (function(){
-  const q = (params.get('date') || '').trim();
-  return (q && /^\d{4}-\d{2}-\d{2}$/.test(q) && q >= MIN && q <= MAX) ? q : TODAY;
-})();
-let filter = 'all';
-let query  = '';
-let rows   = [];
-let lastLoad = null;
-const cache = new Map();
-const srcUrl = (params.get('src') || DATA_URL || '').trim();
-
-/* ---- 讀取資料 ---- */
-async function load(force){
-  const key = '__all__';
-  if (!force && cache.has(key)) { rows = cache.get(key); render(); return; }
-
-  setLoading(true);
-  let data = null, err = null;
-  if (srcUrl){
-    try{
-      const url = srcUrl;
-      const res = await fetch(url + (url.includes('?') ? '&' : '?') + '_t=' + Date.now(), {cache:'no-store'});
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      data = await res.json();
-    }catch(e){ err = e; }
-  }
-  if (data == null){
-  $('#notice').innerHTML = '<div class="note">' +
-    (srcUrl ? '無法連線到資料來源（' + esc(err ? err.message : '未知錯誤') + '），請稍後再試。'
-            : '尚未設定 API 網址，請在設定區填入 DATA_URL。') +
-    '</div>';
-    rows = [];
-  } else {
-    $('#notice').innerHTML = '';
-    rows = parseRows(data);
-  }
-  cache.set(key, rows);
-  lastLoad = new Date();
-  setLoading(false);
-  render();
-}
-
-
-
-function setLoading(on){
-  $('#btnRefresh').classList.toggle('spin', on);
-  if (on) $('#list').innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div>';
-}
-
-
-const normCourse = v => v === 'dynamic' ? 'dyn' : v === 'standard' ? 'std' : 'oth';
-
-/* ---- 抓資料 ---- */
-function parseRows(json){
-  return (json.data || []).map(row => ({
-    date:      row.date      || '',
-    time:      row.startTime ? row.startTime.slice(0,5) : '',
-    end:       row.endTime   ? row.endTime.slice(0,5)   : '',
-    course:    normCourse(row.course),
-    eid:       String(row.empId || '').trim(),
-    name:      String(row.name  || '').trim(),
-    phone:     String(row.phone || '').trim()
-  }));
-}
-
-
-
-/* ---- 篩選與繪製 ---- */
-function todaysRows(){
-  let r = rows.filter(x => !x.date || x.date === curDate);
-  // 若整批資料都沒有日期欄位，就全部顯示（避免誤篩成空白）
-  if (!rows.some(x => x.date)) r = rows.slice();
-  return r.sort((a,b) => (a.time||'~').localeCompare(b.time||'~') || a.name.localeCompare(b.name,'zh-Hant'));
-}
-function render(){
-  const base = todaysRows();
-  const cStd = base.filter(r => r.course === 'std').length;
-  const cDyn = base.filter(r => r.course === 'dyn').length;
-  $('#nAll').textContent = base.length; $('#nStd').textContent = cStd; $('#nDyn').textContent = cDyn;
-
-  let list = filter === 'all' ? base : base.filter(r => r.course === filter);
-  if (query){
-    const q = query.toLowerCase();
-    list = list.filter(r => (r.eid+' '+r.name+' '+r.phone).toLowerCase().includes(q));
-  }
-
-  const d = parseYmd(curDate);
-  $('#dLabel').textContent = (d.getMonth()+1) + ' 月 ' + d.getDate() + ' 日'
-      + (curDate === TODAY ? '（今天）' : '');
-  $('#dWeek').textContent = d.getFullYear() + ' 年・' + WK[d.getDay()];
-  $('#prev').disabled = curDate <= MIN;
-  $('#next').disabled = curDate >= MAX;
-  $('#btnToday').disabled = curDate === TODAY;
-
-  if ($('#calWrap').classList.contains('on')) renderCal();
-
-  const nLive = base.filter(isActive).length;
-  $('#count').innerHTML = list.length
-      ? '共 ' + list.length + ' 位使用者' + (filter==='all' ? '（標準 '+cStd+'・動態 '+cDyn+'）' : '')
-        + (nLive ? ' <b class="livecnt">・目前使用中 ' + nLive + ' 位</b>' : '')
-      : '';
-
-  $('#list').innerHTML = list.length ? list.map(card).join('') : `
-    <div class="empty"><div class="big">⛳</div>
-      <div>這一天${filter==='std'?'標準球道':filter==='dyn'?'動態球道':''}沒有使用紀錄</div>
-    </div>`;
-
-  $('#srcNote').textContent = lastLoad
-    ? '資料已更新 ' + pad(lastLoad.getHours()) + ':' + pad(lastLoad.getMinutes())
-    : '';
-  $('#foot').textContent = '可查詢範圍：' + MIN.replace(/-/g,'/') + " ～ " + MAX.replace(/-/g,'/');
-}
-function nowHM(){ const d = new Date(); return pad(d.getHours())+':'+pad(d.getMinutes()); }
-function isActive(r){
-  return curDate === TODAY && r.time && r.end && r.time <= nowHM() && nowHM() <= r.end;
-}
-function slot(r){
-  if (!r.time) return '';
-  return r.end ? r.time + '<span class="dash">～</span>' + r.end : r.time;
-}
-function card(r){
-  const digits = r.phone.replace(/[^\d+]/g,'');
-  const cls = r.course;
-  const act = isActive(r);
-  return `
-  <div class="card ${cls}${act?' live':''}">
-    <div class="info">
-      <div class="line1">
-        <span class="name">${esc(r.name || '（未填姓名）')}</span>
-        ${r.eid ? `<span class="eid">${esc(r.eid)}</span>` : ''}
-        ${act ? '<span class="badge"><i></i>使用中</span>' : ''}
+<!-- Modal 日曆 -->
+<div class="modal fade" id="calModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered cal-modal-width">
+    <div class="modal-content shadow border-0 rounded-4">
+      <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
+        <button type="button" class="btn btn-sm text-secondary border-0 fs-5" id="mPrev">‹</button>
+        <h6 class="modal-title fw-bold mb-0" id="mTitle">—</h6>
+        <button type="button" class="btn btn-sm text-secondary border-0 fs-5" id="mNext">›</button>
       </div>
-      <div class="line2">
-        <span class="tag ${cls}">${cls === 'std' ? '標準球道' : '動態球道'}</span>
-        ${r.time ? `<span class="time">${slot(r)}</span>` : ''}
-        ${r.phone ? `<span class="phone">${esc(r.phone)}</span>` : '<span class="phone">無電話</span>'}
+      <div class="modal-body">
+        <div id="calGrid" class="d-grid gap-1" style="grid-template-columns: repeat(7, 1fr); text-align: center;"></div>
+      </div>
+      <div class="modal-footer border-0 pt-0 d-flex justify-content-between">
+        <button type="button" class="btn btn-sm btn-link text-decoration-none text-muted p-0 fw-bold" id="calToday">回到今天</button>
+        <button type="button" class="btn btn-sm text-white rounded-pill px-3 fw-bold" data-bs-dismiss="modal" style="background: #1C5132;">關閉</button>
       </div>
     </div>
-    ${digits
-      ? `<a class="call" href="tel:${esc(digits)}" aria-label="撥打給 ${esc(r.name)}">
-           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-         </a>`
-      : `<span class="call off"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 2l20 20"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6"/></svg></span>`}
-  </div>`;
-}
+  </div>
+</div>
 
-/* ---- 日曆 ---- */
-let calMonth = curDate.slice(0,7);   // 'YYYY-MM'
-const monthShift = (ym,k) => {
-  let [y,m] = ym.split('-').map(Number);
-  m += k; y += Math.floor((m-1)/12); m = ((m-1)%12+12)%12+1;
-  return y + '-' + pad(m);
-};
-function dayCounts(){                // 各日期筆數（用於日曆上的小圓點）
-  const c = {};
-  rows.forEach(r => { if (r.date) c[r.date] = (c[r.date]||0)+1; });
-  return Object.keys(c).length > 1 ? c : {};   // 只抓單日資料時不畫點，避免誤導
-}
-function renderCal(){
-  const [y,m] = calMonth.split('-').map(Number);
-  $('#mTitle').textContent = y + ' 年 ' + m + ' 月';
-  $('#mPrev').disabled = calMonth <= MIN.slice(0,7);
-  $('#mNext').disabled = calMonth >= MAX.slice(0,7);
 
-  const counts = dayCounts();
-  const first = new Date(y, m-1, 1).getDay();
-  const days  = new Date(y, m, 0).getDate();
-  let html = WK.map((w,i) => `<div class="wd${i===0||i===6?' we':''}">${w[1]}</div>`).join('');
-  for (let i=0;i<first;i++) html += '<button class="day oth" disabled></button>';
-  for (let d=1;d<=days;d++){
-    const ds = y+'-'+pad(m)+'-'+pad(d);
-    const off = ds < MIN || ds > MAX;
-    const cls = ['day', ds===curDate?'sel':'', ds===TODAY?'today':''].filter(Boolean).join(' ');
-    html += `<button class="${cls}" data-d="${ds}" ${off?'disabled':''}>${d}`
-          + (counts[ds] && !off ? '<span class="dot"></span>' : '') + '</button>';
-  }
-  $('#calGrid').innerHTML = html;
-  $('#calGrid').querySelectorAll('.day[data-d]').forEach(b => {
-    b.onclick = () => { goto(b.dataset.d); closeCal(); };
-  });
-  $('#calToday').disabled = curDate === TODAY;
-  $('#calHint').textContent = Object.keys(counts).length
-      ? '有小圓點的日期表示當天有使用紀錄'
-      : '可查詢 ' + MIN.replace(/-/g,'/') + ' ～ ' + MAX.replace(/-/g,'/');
-}
-function openCal(){ calMonth = curDate.slice(0,7); renderCal(); $('#calWrap').classList.add('on'); }
-function closeCal(){ $('#calWrap').classList.remove('on'); }
 
-$('#btnCal').onclick   = openCal;
-$('#calBd').onclick    = closeCal;
-$('#calClose').onclick = closeCal;
-$('#calToday').onclick = () => { goto(TODAY); closeCal(); };
-$('#mPrev').onclick    = () => { calMonth = monthShift(calMonth,-1); renderCal(); };
-$('#mNext').onclick    = () => { calMonth = monthShift(calMonth, 1); renderCal(); };
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCal(); });
-
-/* ---- 事件 ---- */
-function goto(date){
-  if (date < MIN) date = MIN;
-  if (date > MAX) date = MAX;
-  curDate = date;
-  history.replaceState(null,'', location.pathname + '?' +
-    new URLSearchParams(Object.assign(Object.fromEntries(params), {date:curDate})).toString());
-  load(false);
-}
-$('#prev').onclick = () => goto(addDays(curDate,-1));
-$('#next').onclick = () => goto(addDays(curDate, 1));
-$('#btnToday').onclick = () => goto(TODAY);
-$('#btnRefresh').onclick = () => load(true);
-$('#q').oninput = e => { query = e.target.value.trim(); render(); };
-document.querySelectorAll('.chip').forEach(b => b.onclick = () => {
-  filter = b.dataset.c;
-  document.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
-  render();
-});
-// 手機左右滑動換日
-(function(){
-  let x0 = null, y0 = null;
-  document.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive:true});
-  document.addEventListener('touchend', e => {
-    if (x0 == null || $('#calWrap').classList.contains('on')) { x0 = null; return; }
-    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
-    if (Math.abs(dx) > 70 && Math.abs(dy) < 50) goto(addDays(curDate, dx < 0 ? 1 : -1));
-    x0 = null;
-  }, {passive:true});
-})();
-setInterval(() => { if (curDate === TODAY) render(); }, 60000);   // 每分鐘更新「使用中」狀態
-if (AUTO_REFRESH_SEC > 0) setInterval(() => load(true), AUTO_REFRESH_SEC * 1000);
-document.addEventListener('visibilitychange', () => { if (!document.hidden && srcUrl) load(true); });
-
-load(false);
-</script>
+<div class="foot" id="foot"></div>
+<!-- 1. 先載入 jQuery 與 Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app-core.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/date-controls.js"></script>
+<script src="js/timer.js"></script>
 </body>
 </html>

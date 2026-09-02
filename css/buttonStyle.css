@@ -1,0 +1,134 @@
+/* ---- 按鈕共通基礎樣式 ---- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 600; /* 粗體 */
+  border-radius: 999px; /* 膠囊圓角 */
+  background-color: #ffffff;
+  color: #15201b;
+  border: 1px solid #e2e8e5; /* 邊框 */
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.button-timer {
+  border: none;
+  background-color: #1c5132;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.button-timer:hover {
+  opacity: 0.9;
+}
+
+.button-timer:active {
+  transform: scale(0.95);
+  background-color: #153e27;
+}
+
+
+/* ---- 1. 全部 (#1C5132 墨綠) ---- */
+.btn-check:checked + .chip-all,
+.chip-all:hover {
+  background-color: #1C5132;
+  border-color: #1C5132;
+  color: #ffffff;
+}
+
+/* ---- 2. 標準球道 (#F4A460 暖棕橘) ---- */
+.btn-check:checked + .chip-std,
+.chip-std:hover {
+  background-color: #ff9138;
+  border-color: #ff9138;
+  color: #ffffff;
+}
+
+/* ---- 3. 動態球道 (#5F9EA0 湖水藍綠) ---- */
+.btn-check:checked + .chip-dyn,
+.chip-dyn:hover {
+  background-color: #3184a5;
+  border-color: #3184a5;
+  color: #ffffff;
+}
+
+.search {
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid #798981!important;
+    background: #ffffff!important;
+    color: #15201B !important;
+    padding: 6px 14px;
+    font-size: 16px;
+}
+/* 覆蓋 Bootstrap 輸入框聚焦時的藍色光暈 */
+.search:focus {
+  border-color: #1C5132 !important; /* 聚焦時的邊框顏色（可換成你的球場綠） */
+  box-shadow: 0 0 0 0.25rem rgba(28, 81, 50, 0.25) !important; /* 綠色發光（若完全不要發光改寫 none） */
+  outline: none !important;
+}
+
+.btn-date-trigger {
+  position: relative;
+  width: 100%;
+  padding: 12px 50px 12px 14px;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #e3e8ef;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.btn-date-trigger::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  width: 28px;
+  height: 28px;
+  transform: translateY(-50%);
+  background-color: #E6F0EA;
+  border-radius: 50%;
+  transition: .2s ease;
+}
+
+.btn-date-trigger .main-date svg {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 19px;
+  width: 16px;
+  height: 16px;
+  color: #1C5132;
+  transform: translateY(-50%);
+  transition: .2s ease;
+}
+
+.btn-date-trigger:hover,
+.btn-date-trigger:focus-visible {
+  border-color: #1C5132;
+  background: #1C5132;
+  outline: none;
+}
+
+.btn-date-trigger:hover::after,
+.btn-date-trigger:focus-visible::after {
+  background: #1C5132;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.btn-date-trigger:hover .main-date svg,
+.btn-date-trigger:focus-visible .main-date svg {
+  color: #fff;
+}
+

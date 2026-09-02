@@ -1,0 +1,157 @@
+.count {
+  font-size: 13px;
+  color: #798981;
+  padding: 6px 4px 10px;
+}
+
+/* 卡片主體：橫向排列 (Flexbox) */
+.card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+/* 「使用中」卡片亮綠邊框 */
+.card.live {
+  border: 1.5px solid #1C5132 !important;
+  background-color: #fafdfb;
+}
+
+/* 「可預約空球道」虛線卡片 */
+.card.empty-slot {
+  background-color: #f8fafc !important;
+  border: 1.5px dashed #cbd5e1 !important;
+  box-shadow: none !important;
+}
+
+/* 左側文字包覆區 */
+.card-body-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.line1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.line2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* 球道標籤 */
+.tag {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  background: #e5e7eb;
+  font-weight: 600;
+}
+
+.tag.std {
+  background: #ffe3cb;
+  color: #ff9138;
+}
+
+.tag.dyn {
+  background: #cce2ec;
+  color: #3184a5;
+}
+
+/* 使用中 Badge */
+.badge-live {
+  align-items: center;
+  gap: 4px;
+  background-color: #1C5132;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+
+/* 右側通話按鈕獨立區塊 */
+.card-action {
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 右側獨立按鈕預設狀態 */
+.card-action .call {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #E6F0EA;
+  color: #1C5132;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 電腦滑鼠懸浮效果：背景加深，圖示變白 */
+.card-action .call:hover {
+  background-color: #1C5132;
+  color: #ffffff !important;
+}
+
+/* 手機點擊 / 滑鼠按下的動態回饋：按壓縮放，圖示變白 */
+.card-action .call:active {
+  background-color: #153e27;
+  color: #ffffff !important;
+}
+
+/* 無電話號碼或空球道時的停用狀態 */
+.card-action .call.off {
+  background-color: #f1f5f9;
+  color: #cbd5e1 !important;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.empty .big {
+  font-size: 40px;
+  margin-bottom: 8px;
+  opacity: .5;
+}
+
+.foot {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4px 16px 28px;
+  font-size: 12px;
+  color: #798981;
+  text-align: center;
+}
+
+/* 當前時間段：綠色粗邊框與微明亮光暈 */
+.card.is-active {
+  border: 2.5px solid #1C5132 !important;
+  box-shadow: 0 4px 14px rgba(28, 81, 50, 0.18) !important;
+  position: relative;
+  background-color: #ffffff;
+}
