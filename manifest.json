@@ -3,7 +3,7 @@
   "name": "高爾夫球場使用狀況",
   "short_name": "球場使用",
   "lang": "zh-Hant",
- "start_url": ""./login.html"",
+ "start_url": "./login.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#1c5132",
