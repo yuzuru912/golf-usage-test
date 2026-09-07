@@ -2,35 +2,32 @@
    1. 全域變數與重設
    ============================================================ */
 :root {
-  --brand-green: #1C5132;        /* 品牌深綠色 */
-  --bg-cream: #F4F6F5;           /* 內容米白色 */
-  --max-content-width: 420px;    /* 手機模式最大限制寬度 */
+  --brand-green: #1C5132;
+  --bg-cream: #F4F6F5;
+  --max-content-width: 420px;
 }
 
-body {
-    overscroll-behavior-y: none;
-}
 * {
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent; /* 消除點擊高亮藍框 */
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* 鎖死深綠背景，徹底解決 iOS 上下滑動與狀態列白邊 */
-html, body {
+html,
+body,
+body.bg-cream {
   margin: 0 !important;
   padding: 0 !important;
-  background-color: var(--brand-green) !important;
   width: 100%;
-  min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  min-height: 100dvh;
+  background: var(--brand-green) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
   overflow-x: hidden;
-  padding-bottom: env(safe-area-inset-bottom) !important;
 }
 
-.bg-cream {
-  background-color: var(--bg-cream) !important;
+/* 米白色只放在頁面內容，不能套在 body */
+main.app-container {
+  background: var(--bg-cream) !important;
 }
 
 /* ============================================================
