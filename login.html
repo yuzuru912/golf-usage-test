@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#1C5132">
-  <title>高爾夫球場使用狀況｜登入</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f5132">
+<title>高爾夫球場使用狀況</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/card.css">
+<link rel="stylesheet" href="css/webAppStyle.css">
+<link rel="stylesheet" href="css/buttonStyle.css">
+<link rel="stylesheet" href="css/DateBarStyle.css">
+<link rel="apple-touch-icon" sizes="180x180" href="Img\icon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Img\icon-32.png">
+<link rel="icon" href="Img\favicon.ico" sizes="any">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="球場使用">
+<meta name="mobile-web-app-capable" content="yes">
 
   <style>
     :root {
@@ -14,7 +28,7 @@
       --text: #26352d;
       --muted: #718078;
       --border: #d8e4da;
-      --max-content-width: 420px;
+      --max-content-width: 1180px;
     }
 
     * {
@@ -57,7 +71,7 @@
       align-items: center;
       gap: 10px;
       margin: 0 auto;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 700;
     }
 
@@ -75,13 +89,13 @@
       min-height: calc(100vh - 64px);
       display: grid;
       place-items: center;
-      padding: 32px 16px;
+      padding: 48px 32px;
     }
 
     .login-card {
       width: 100%;
-      max-width: var(--max-content-width);
-      padding: 34px 30px;
+      max-width: 620px;
+      padding: 48px 52px;
       border: 1px solid rgba(255, 255, 255, 0.8);
       border-radius: 20px;
       background: rgba(255, 255, 255, 0.94);
@@ -89,40 +103,39 @@
     }
 
     .golf-icon {
-      width: 64px;
-      height: 64px;
+      width: 82px;
+      height: 82px;
       display: grid;
       place-items: center;
       margin: 0 auto 18px;
       border-radius: 18px;
       background: linear-gradient(145deg, #397b4a, var(--brand-green));
       color: #fff;
-      font-size: 30px;
+      font-size: 38px;
     }
 
     .login-card h1 {
       margin: 0;
       text-align: center;
-      font-size: 24px;
+      font-size: 30px;
       letter-spacing: 0.5px;
     }
 
     .subtitle {
-      margin: 10px 0 30px;
+      margin: 14px 0 38px;
       color: var(--muted);
       text-align: center;
-      font-size: 15px;
+      font-size: 18px;
     }
 
     .login-card label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
+      margin-bottom: 10px;
+      font-size: 17px;
       font-weight: 700;
     }
 
     .input-wrap {
-      height: 54px;
+      height: 62px;
       display: flex;
       align-items: center;
       border: 1px solid var(--border);
@@ -137,9 +150,9 @@
     }
 
     .input-icon {
-      margin: 0 12px 0 16px;
+      margin: 0 16px 0 20px;
       color: var(--brand-green);
-      font-size: 18px;
+      font-size: 21px;
     }
 
     .input-wrap input {
@@ -151,7 +164,7 @@
       background: transparent;
       color: var(--text);
       font: inherit;
-      font-size: 16px;
+      font-size: 18px;
     }
 
     .input-wrap input::placeholder {
@@ -160,14 +173,14 @@
 
     .login-button {
       width: 100%;
-      height: 52px;
-      margin-top: 22px;
+      height: 58px;
+      margin-top: 26px;
       border: 0;
       border-radius: 12px;
       background: linear-gradient(135deg, var(--brand-green-light), var(--brand-green));
       color: #fff;
       font: inherit;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
       cursor: pointer;
       box-shadow: 0 5px 12px rgba(28, 81, 50, 0.20);
@@ -208,18 +221,55 @@
         padding: 30px 24px;
       }
 
+      .golf-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 30px;
+      }
+
+      .login-card h1 {
+        font-size: 24px;
+      }
+
+      .subtitle {
+        margin: 10px 0 30px;
+        font-size: 15px;
+      }
+
+      .login-card label {
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      .input-wrap {
+        height: 54px;
+      }
+
+      .input-icon {
+        margin: 0 12px 0 16px;
+        font-size: 18px;
+      }
+
+      .input-wrap input {
+        font-size: 16px;
+      }
+
       .login-button {
         height: 48px;
+        margin-top: 22px;
+        font-size: 16px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <div class="brand-icon">⛳</div>
-      <span>高爾夫球場使用狀況</span>
+  <header class="sticky-top text-white shadow-sm py-3 header-custom">
+    <div class="header-content d-flex align-items-center">
+      <div class="brand">
+        <div class="brand-icon">⛳</div>
+        <span>高爾夫球場使用狀況</span>
+      </div>
     </div>
   </header>
 
@@ -228,10 +278,10 @@
       <div class="golf-icon">⛳</div>
 
       <h1>歡迎登入</h1>
-      <p class="subtitle">請輸入工號以查看球場使用狀況</p>
+      <p class="subtitle">請輸入密碼以查看球場使用狀況</p>
 
       <form id="loginForm">
-        <label for="employeeId">工號</label>
+        <label for="employeeId">密碼</label>
 
         <div class="input-wrap">
           <span class="input-icon">👤</span>
@@ -239,18 +289,25 @@
             id="employeeId"
             name="employeeId"
             type="text"
-            placeholder="請輸入工號"
+            placeholder="請輸入密碼"
             autocomplete="username"
             required
           >
         </div>
 
         <button class="login-button" type="submit">登入</button>
+        
+
       </form>
     </section>
   </main>
 
   <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+      });
+    }
+
     document.getElementById('loginForm').addEventListener('submit', function (event) {
       event.preventDefault();
 
@@ -260,8 +317,7 @@
 
       console.log('登入工號：', employeeId);
 
-      // 驗證成功後導向首頁：
-      // location.href = 'index.html';
+      location.href = 'index.html';
     });
   </script>
 </body>

@@ -62,11 +62,19 @@
     }
 
     // 重新整理按鈕事件
-    const btnReload = document.querySelector('#btnIdleReload');
-    if (btnReload) {
-      btnReload.addEventListener('click', () => {
-        window.location.reload();
-      });
-    }
-  });
+    const btnReload = document.querySelector('#btnReload');
+    btnReload.addEventListener('click', () => {
+  const idleModalEl = document.querySelector('#idleModal');
+  const modalInstance = idleModalEl && window.bootstrap
+    ? bootstrap.Modal.getInstance(idleModalEl)
+    : null;
+
+  if (modalInstance) modalInstance.hide();
+
+  isIdleModalOpen = false;
+  load();
+  resetIdleTimer();
+});
+  }
+);
 })();

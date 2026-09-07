@@ -2,6 +2,42 @@
    日期選擇與 Ajax 查詢
    ============================================================ */
 
+function loadCalendarMarks() {
+  $.ajax({
+    method: API_METHOD,
+    url: DATA_URL,
+    contentType: 'application/json; charset=utf-8',
+    data: JSON.stringify({
+      StartDateTime: MIN,
+      EndDateTime: MAX
+    }),
+    dataType: 'json',
+
+    success: data => {
+      const list = Array.isArray(data)
+        ? data
+        : (data.data || data.Data || []);
+
+      calendarDates.clear();
+
+      list.forEach(item => {
+        const date = item.date || item.Date ||
+          item.startDateTime || item.StartDateTime;
+
+        if (date) {
+          calendarDates.add(String(date).slice(0, 10));
+        }
+      });
+
+      renderCalendarGrid();
+    },
+
+    error: (jqXHR, textStatus, errorThrown) => {
+      console.error('日曆資料讀取失敗：', textStatus, errorThrown);
+    }
+  });
+}
+
 function goto(dateStr) {
   // 限制只能查詢今天前後 31 天
   if (dateStr < MIN) dateStr = MIN;
@@ -21,6 +57,9 @@ function goto(dateStr) {
   load();
 }
 
+function slot(row) {
+  return row.end ? `${row.time}～${row.end}` : row.time;
+}
 
 /* ============================================================
    Modal 日曆渲染
@@ -71,6 +110,7 @@ function renderCalendarGrid() {
     const isSelected = isSameDay(targetDate, selectedDateObj);
     const isDisabled =
       targetDate < minDateObj || targetDate > maxDateObj;
+    const hasReservation = calendarDates.has(targetYmd);
 
     const dayBtn = document.createElement('button');
 
@@ -89,6 +129,22 @@ function renderCalendarGrid() {
 
     dayBtn.style.width = '32px';
     dayBtn.style.height = '32px';
+    dayBtn.style.position = 'relative';
+
+    if (hasReservation) {
+      const dot = document.createElement('span');
+
+      dot.style.cssText = `
+        position: absolute;
+        bottom: 2px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: ${isSelected ? '#ffffff' : '#198754'};
+      `;
+
+      dayBtn.appendChild(dot);
+    }
 
     if (!isDisabled) {
       dayBtn.onclick = () => {
@@ -119,6 +175,7 @@ function closeCalModal() {
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  loadCalendarMarks(); // 只抓一次，給日曆標記用
   // 重新整理：重新 Ajax 抓取目前選擇日期
   const btnRefresh = $$('#btnRefresh');
 

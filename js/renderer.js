@@ -62,7 +62,9 @@ function card(r) {
 }
 
 function render() {
-  const base = rows;
+  // 只保留目前選擇日期 (curDate) 的資料
+  const base = rows.filter(r => r.date === curDate);
+
   const cStd = base.filter(r => r.course === 'std').length;
   const cDyn = base.filter(r => r.course === 'dyn').length;
 
@@ -79,7 +81,6 @@ function render() {
   const d = parseYmd(curDate);
   if ($$('#dLabel')) $$('#dLabel').textContent = (d.getMonth() + 1) + ' 月 ' + d.getDate() + ' 日' + (curDate === TODAY ? '（今天）' : '');
   if ($$('#dWeek')) $$('#dWeek').textContent = d.getFullYear() + ' 年・' + WEEK_DAYS[d.getDay()];
-
 
   const realUsers = list.filter(r => r.name || r.eid);
   const userCount = realUsers.length;

@@ -1,48 +1,5628 @@
 {
-    "count": 92,
+    "count": 620,
     "data": [
         {
-            "date": "2026-09-01",
+            "date": "2026-08-18",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-18",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-19",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-20",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-21",
             "startTime": "08:00:00",
             "endTime": "09:00:00",
             "course": "dynamic",
             "empId": "03151",
             "name": "李宗翰",
-            "phone": "09123456789",
+            "phone": "0912345678",
             "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-21",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-22",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-23",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-24",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-25",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-26",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-27",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-28",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-29",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-08-30",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-08-31",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
         },
         {
             "date": "2026-09-01",
             "startTime": "08:00:00",
             "endTime": "09:00:00",
             "course": "dynamic",
-            "empId": "03152",
-            "name": "張詠欽",
-            "phone": "09789456123",
-            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
         },
         {
             "date": "2026-09-01",
             "startTime": "08:00:00",
             "endTime": "09:00:00",
             "course": "standard",
-            "empId": "02859",
-            "name": "王菁菁",
-            "phone": "09456123789",
-            "dept": "營管處-IT資訊部-數位發展課"
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
         },
         {
             "date": "2026-09-01",
             "startTime": "09:00:00",
             "endTime": "10:00:00",
             "course": "dynamic",
-            "empId": "X0351",
-            "name": "吳賢鈞",
-            "phone": "09456789123",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
             "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
         },
         {
             "date": "2026-09-01",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-01",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-02",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-03",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-04",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-05",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-06",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-07",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-08",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-09",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-10",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-11",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-12",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-13",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-14",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-15",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-15",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-15",
             "startTime": "09:00:00",
             "endTime": "10:00:00",
             "course": "dynamic",
@@ -52,17 +5632,17 @@
             "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
         },
         {
-            "date": "2026-09-01",
+            "date": "2026-09-15",
             "startTime": "09:00:00",
             "endTime": "10:00:00",
             "course": "standard",
-            "empId": null,
-            "name": null,
-            "phone": null,
-            "dept": null
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
         },
         {
-            "date": "2026-09-01",
+            "date": "2026-09-15",
             "startTime": "10:00:00",
             "endTime": "11:00:00",
             "course": "dynamic",
@@ -72,7 +5652,7 @@
             "dept": null
         },
         {
-            "date": "2026-09-01",
+            "date": "2026-09-15",
             "startTime": "10:00:00",
             "endTime": "11:00:00",
             "course": "standard",
@@ -82,7 +5662,7 @@
             "dept": null
         },
         {
-            "date": "2026-09-01",
+            "date": "2026-09-15",
             "startTime": "11:00:00",
             "endTime": "12:00:00",
             "course": "dynamic",
@@ -92,7 +5672,7 @@
             "dept": null
         },
         {
-            "date": "2026-09-01",
+            "date": "2026-09-15",
             "startTime": "11:00:00",
             "endTime": "12:00:00",
             "course": "standard",
@@ -102,7 +5682,17 @@
             "dept": null
         },
         {
-            "date": "2026-09-01",
+            "date": "2026-09-15",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-15",
             "startTime": "12:00:00",
             "endTime": "13:00:00",
             "course": "standard",
@@ -112,17 +5702,407 @@
             "dept": null
         },
         {
-            "date": "2026-09-01",
+            "date": "2026-09-15",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-15",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "04321",
+            "name": "蔡建宏",
+            "phone": "0955667788",
+            "dept": "製造處-生產工程課"
+        },
+        {
+            "date": "2026-09-15",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-15",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-15",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-15",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-15",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": "03152",
+            "name": "張詠欽",
+            "phone": "0978945612",
+            "dept": "營管處-IT資訊部-資源整合課-整合一組"
+        },
+        {
+            "date": "2026-09-15",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-15",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-15",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "02859",
+            "name": "王菁菁",
+            "phone": "0945612378",
+            "dept": "營管處-IT資訊部-數位發展課"
+        },
+        {
+            "date": "2026-09-16",
             "startTime": "12:00:00",
             "endTime": "13:00:00",
             "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
             "empId": null,
             "name": null,
             "phone": null,
             "dept": null
         },
         {
-            "date": "2026-09-01",
+            "date": "2026-09-16",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "13:00:00",
+            "endTime": "14:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
+            "course": "standard",
+            "empId": "03151",
+            "name": "李宗翰",
+            "phone": "0912345678",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "standard",
+            "empId": "09876",
+            "name": "鄭淑芬",
+            "phone": "0933445566",
+            "dept": "財務處-會計課"
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-16",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "08:00:00",
+            "endTime": "09:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "dynamic",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "09:00:00",
+            "endTime": "10:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "10:00:00",
+            "endTime": "11:00:00",
+            "course": "standard",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "dynamic",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "11:00:00",
+            "endTime": "12:00:00",
+            "course": "standard",
+            "empId": "X0350",
+            "name": "陳宣廷",
+            "phone": "",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "dynamic",
+            "empId": "05678",
+            "name": "黃嘉豪",
+            "phone": "0922334455",
+            "dept": "研發處-先進技術部"
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "12:00:00",
+            "endTime": "13:00:00",
+            "course": "standard",
+            "empId": "07788",
+            "name": "楊子晴",
+            "phone": "0988776655",
+            "dept": "業務處-國內業務部"
+        },
+        {
+            "date": "2026-09-17",
             "startTime": "13:00:00",
             "endTime": "14:00:00",
             "course": "dynamic",
@@ -132,7 +6112,7 @@
             "dept": null
         },
         {
-            "date": "2026-09-01",
+            "date": "2026-09-17",
             "startTime": "13:00:00",
             "endTime": "14:00:00",
             "course": "standard",
@@ -142,17 +6122,7 @@
             "dept": null
         },
         {
-            "date": "2026-09-01",
-            "startTime": "14:00:00",
-            "endTime": "15:00:00",
-            "course": "standard",
-            "empId": null,
-            "name": null,
-            "phone": null,
-            "dept": null
-        },
-        {
-            "date": "2026-09-01",
+            "date": "2026-09-17",
             "startTime": "14:00:00",
             "endTime": "15:00:00",
             "course": "dynamic",
@@ -162,9 +6132,9 @@
             "dept": null
         },
         {
-            "date": "2026-09-01",
-            "startTime": "15:00:00",
-            "endTime": "16:00:00",
+            "date": "2026-09-17",
+            "startTime": "14:00:00",
+            "endTime": "15:00:00",
             "course": "standard",
             "empId": null,
             "name": null,
@@ -172,7 +6142,7 @@
             "dept": null
         },
         {
-            "date": "2026-09-01",
+            "date": "2026-09-17",
             "startTime": "15:00:00",
             "endTime": "16:00:00",
             "course": "dynamic",
@@ -182,7 +6152,27 @@
             "dept": null
         },
         {
-            "date": "2026-09-01",
+            "date": "2026-09-17",
+            "startTime": "15:00:00",
+            "endTime": "16:00:00",
+            "course": "standard",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "16:00:00",
+            "endTime": "17:00:00",
+            "course": "dynamic",
+            "empId": null,
+            "name": null,
+            "phone": null,
+            "dept": null
+        },
+        {
+            "date": "2026-09-17",
             "startTime": "16:00:00",
             "endTime": "17:00:00",
             "course": "standard",
@@ -192,14 +6182,24 @@
             "dept": null
         },
         {
-            "date": "2026-09-01",
-            "startTime": "16:00:00",
-            "endTime": "17:00:00",
+            "date": "2026-09-17",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
             "course": "dynamic",
-            "empId": null,
-            "name": null,
-            "phone": null,
-            "dept": null
+            "empId": "01234",
+            "name": "林雅婷",
+            "phone": "0911223344",
+            "dept": "行政處-總務部"
+        },
+        {
+            "date": "2026-09-17",
+            "startTime": "17:00:00",
+            "endTime": "18:00:00",
+            "course": "standard",
+            "empId": "X0351",
+            "name": "吳賢鈞",
+            "phone": "0945678912",
+            "dept": "營管處-IT資訊部-數位發展課-AI賦能組"
         }
     ]
 }
