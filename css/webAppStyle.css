@@ -159,5 +159,7 @@ html {
 
   body.app-page main.app-container {
     background-color: var(--bg-cream) !important;
+    padding-top: 1rem;
   }
 }
+
