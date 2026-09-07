@@ -2,7 +2,6 @@
   "id": "./",
   "name": "高爾夫球場使用狀況",
   "short_name": "球場使用",
-  "description": "查看高爾夫球場的使用狀況。",
   "lang": "zh-Hant",
   "start_url": "./",
   "scope": "./",
