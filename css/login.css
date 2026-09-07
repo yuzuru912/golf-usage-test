@@ -181,8 +181,8 @@ body {
 
 @media (max-width: 600px) {
     .topbar {
-    height: 58px;
-    padding: 0 16px;
+    height: calc(58px + env(safe-area-inset-top));
+    padding: env(safe-area-inset-top) 16px 0;
     }
 
     .brand {
@@ -237,4 +237,29 @@ body {
     margin-top: 22px;
     font-size: 16px;
     }
+}
+
+/* iPhone 狀態列後方維持深綠 */
+html {
+  min-height: 100%;
+  background: var(--brand-green);
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 標頭填入 iPhone 頂端安全區 */
+.topbar {
+  height: calc(64px + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) 20px 0;
+  flex: 0 0 auto;
+}
+
+/* 讓登入頁背景填滿剩餘高度 */
+.login-page {
+  flex: 1;
+  min-height: 0;
 }
