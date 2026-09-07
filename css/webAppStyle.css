@@ -7,6 +7,9 @@
   --max-content-width: 420px;    /* 手機模式最大限制寬度 */
 }
 
+body {
+    overscroll-behavior-y: none;
+}
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent; /* 消除點擊高亮藍框 */
