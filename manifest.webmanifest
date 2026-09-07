@@ -4,7 +4,7 @@
   "short_name": "球場使用",
   "description": "查看高爾夫球場的使用狀況。",
   "lang": "zh-Hant",
-  "start_url": "./login.html",
+  "start_url": "synceventshub.csun.com.tw",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f4f6f5",
