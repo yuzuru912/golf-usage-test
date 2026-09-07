@@ -1,6 +1,4 @@
-/* ============================================================
-   1. 全域變數與重設
-   ============================================================ */
+/* 全域變數與重設 */
 :root {
   --brand-green: #1C5132;
   --bg-cream: #F4F6F5;
@@ -12,6 +10,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* 下拉回彈時的底色 */
 html,
 body,
 body.bg-cream {
@@ -19,15 +18,17 @@ body.bg-cream {
   padding: 0 !important;
   width: 100%;
   min-height: 100dvh;
-  background: var(--brand-green) !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  background-color: var(--brand-green) !important;
   overflow-x: hidden;
 }
 
-/* 米白色只放在頁面內容，不能套在 body */
-main.app-container {
-  background: var(--bg-cream) !important;
+/* 正常頁面內容才是米白 */
+#app,
+main,
+.app-container,
+.wrap,
+.container {
+  background-color: var(--bg-cream) !important;
 }
 
 /* ============================================================
