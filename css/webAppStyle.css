@@ -9,7 +9,7 @@
 
 * {
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent; /* 消除點擊高亮藍框 */
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* 鎖死深綠背景，徹底解決 iOS 上下滑動與狀態列白邊 */
@@ -23,7 +23,6 @@ html, body {
   font-size: 16px;
   line-height: 1.5;
   overflow-x: hidden;
-  padding-bottom: env(safe-area-inset-bottom) !important;
 }
 
 .bg-cream {
@@ -161,5 +160,17 @@ html {
     background-color: var(--bg-cream) !important;
     padding-top: 1rem;
   }
+}
+/* 替底部 foot 預留空間，避免蓋住最後一筆資料 */
+main.app-container {
+  padding-bottom: calc(110px + env(safe-area-inset-bottom)) !important;
+}
+
+/* Header 高度只依內容與安全區決定，避免留下多餘綠色區塊 */
+header.header-custom {
+  height: auto !important;
+  min-height: 0 !important;
+  padding-top: max(12px, env(safe-area-inset-top)) !important;
+  padding-bottom: 12px !important;
 }
 
