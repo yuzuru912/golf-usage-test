@@ -163,7 +163,7 @@ html {
 }
 /* 替底部 foot 預留空間，避免蓋住最後一筆資料 */
 main.app-container {
-  padding-bottom: calc(40px + env(safe-area-inset-bottom)) !important;
+  padding-bottom: calc(30px + env(safe-area-inset-bottom)) !important;
 }
 
 /* Header 高度只依內容與安全區決定，避免留下多餘綠色區塊 */
