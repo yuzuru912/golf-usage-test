@@ -107,7 +107,7 @@ function render() {
       ? '資料已更新 ' + pad(lastLoad.getHours()) + ':' + pad(lastLoad.getMinutes())
       : '';
   }
-   if ($$('#foot')) {
+  if ($$('#foot')) {
     $$('#foot').innerHTML =
       '可查詢範圍：' + MIN.replace(/-/g, '/') + " ～ " + MAX.replace(/-/g, '/') +
       '<br><small style="font-weight: normal; font-size: 12px;">Copyright© 2026 CSUN Charlotte Web Design</small>';

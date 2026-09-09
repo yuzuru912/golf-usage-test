@@ -1,339 +1,275 @@
+
 :root {
-  --brand-green: #1c5132;
-  --brand-green-light: #3d814d;
-  --bg-cream: #f4f6f5;
-  --text: #26352d;
-  --muted: #718078;
-  --border: #d8e4da;
-  --max-content-width: 1180px;
+    --brand-green: #1c5132;
+    --brand-green-light: #3d814d;
+    --bg-cream: #f4f6f5;
+    --text: #26352d;
+    --muted: #718078;
+    --border: #d8e4da;
+    --max-content-width: 1180px;
 }
 
-/* =========================
-   全域設定
-   ========================= */
-
 * {
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html,
 body {
-  width: 100%;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: var(--brand-green);
+    min-height: 100%;
+    margin: 0;
 }
 
 body {
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
-  color: var(--text);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "PingFang TC",
-    "Noto Sans TC",
-    "Microsoft JhengHei",
-    sans-serif;
-}
-
-/* =========================
-   頂端標題列
-   ========================= */
-
-.topbar {
-  width: 100%;
-  height: calc(64px + env(safe-area-inset-top));
-  padding:
-    env(safe-area-inset-top)
-    max(20px, env(safe-area-inset-right))
-    0
-    max(20px, env(safe-area-inset-left));
-  display: flex;
-  align-items: center;
-  flex: 0 0 auto;
-  background-color: var(--brand-green);
-  color: #fff;
-  box-shadow: 0 2px 10px rgba(28, 81, 50, 0.16);
-  z-index: 10;
-}
-
-.header-content {
-  width: 100%;
-}
-
-.brand {
-  width: 100%;
-  max-width: var(--max-content-width);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0 auto;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.brand-icon {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  flex: 0 0 auto;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.16);
-  font-size: 18px;
-}
-
-/* =========================
-   登入頁面
-   米白背景放在 main，body 維持深綠
-   ========================= */
-
-.login-page {
-  width: 100%;
-  flex: 1 0 auto;
-  min-height: 0;
-  display: grid;
-  place-items: center;
-  padding:
-    48px
-    max(32px, env(safe-area-inset-right))
-    max(48px, env(safe-area-inset-bottom))
-    max(32px, env(safe-area-inset-left));
-  background:
-    radial-gradient(
-      circle at 8% 90%,
-      rgba(96, 150, 91, 0.2),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 95% 85%,
-      rgba(74, 130, 91, 0.16),
-      transparent 28%
-    ),
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    background:
+    radial-gradient(circle at 8% 90%, rgba(96, 150, 91, 0.20), transparent 30%),
+    radial-gradient(circle at 95% 85%, rgba(74, 130, 91, 0.16), transparent 28%),
     var(--bg-cream);
 }
 
-/* =========================
-   登入卡片
-   ========================= */
+.topbar {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: var(--brand-green);
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(28, 81, 50, 0.16);
+}
+
+.brand {
+    width: 100%;
+    max-width: var(--max-content-width);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.brand-icon {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 18px;
+}
+
+.login-page {
+    min-height: calc(100vh - 64px);
+    display: grid;
+    place-items: center;
+    padding: 48px 32px;
+}
 
 .login-card {
-  width: 100%;
-  max-width: 620px;
-  padding: 48px 52px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 18px 45px rgba(28, 81, 50, 0.13);
+    width: 100%;
+    max-width: 620px;
+    padding: 48px 52px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 18px 45px rgba(28, 81, 50, 0.13);
 }
 
 .golf-icon {
-  width: 82px;
-  height: 82px;
-  display: grid;
-  place-items: center;
-  margin: 0 auto 18px;
-  border-radius: 18px;
-  background: linear-gradient(
-    145deg,
-    #397b4a,
-    var(--brand-green)
-  );
-  color: #fff;
-  font-size: 38px;
+    width: 82px;
+    height: 82px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 18px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #397b4a, var(--brand-green));
+    color: #fff;
+    font-size: 38px;
 }
 
 .login-card h1 {
-  margin: 0;
-  color: var(--text);
-  text-align: center;
-  font-size: 30px;
-  letter-spacing: 0.5px;
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 0.5px;
 }
 
 .subtitle {
-  margin: 14px 0 38px;
-  color: var(--muted);
-  text-align: center;
-  font-size: 18px;
+    margin: 14px 0 38px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 18px;
 }
 
 .login-card label {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--text);
-  font-size: 17px;
-  font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 700;
 }
 
-/* =========================
-   密碼輸入框
-   ========================= */
-
 .input-wrap {
-  width: 100%;
-  height: 62px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background-color: #fff;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    transition: 0.2s ease;
 }
 
 .input-wrap:focus-within {
-  border-color: var(--brand-green);
-  box-shadow: 0 0 0 4px rgba(28, 81, 50, 0.13);
+    border-color: var(--brand-green);
+    box-shadow: 0 0 0 4px rgba(28, 81, 50, 0.13);
 }
 
 .input-icon {
-  margin: 0 16px 0 20px;
-  color: var(--brand-green);
-  font-size: 21px;
+    margin: 0 16px 0 20px;
+    color: var(--brand-green);
+    font-size: 21px;
 }
 
 .input-wrap input {
-  width: 100%;
-  height: 100%;
-  min-width: 0;
-  padding: 0 14px 0 0;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  color: var(--text);
-  font: inherit;
-  font-size: 18px;
+    width: 100%;
+    height: 100%;
+    padding: 0 14px 0 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    font-size: 18px;
 }
 
 .input-wrap input::placeholder {
-  color: #9aa39d;
+    color: #9aa39d;
 }
 
-/* =========================
-   登入按鈕
-   ========================= */
-
 .login-button {
-  width: 100%;
-  height: 58px;
-  margin-top: 26px;
-  border: 0;
-  border-radius: 12px;
-  background: linear-gradient(
-    135deg,
-    var(--brand-green-light),
-    var(--brand-green)
-  );
-  color: #fff;
-  font: inherit;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 5px 12px rgba(28, 81, 50, 0.2);
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease;
+    width: 100%;
+    height: 58px;
+    margin-top: 26px;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--brand-green-light), var(--brand-green));
+    color: #fff;
+    font: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(28, 81, 50, 0.20);
+    transition: 0.18s ease;
 }
 
 .login-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 16px rgba(28, 81, 50, 0.25);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(28, 81, 50, 0.25);
 }
 
 .login-button:active {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 .login-button:focus-visible {
-  outline: 3px solid rgba(28, 81, 50, 0.35);
-  outline-offset: 3px;
+    outline: 3px solid rgba(28, 81, 50, 0.35);
+    outline-offset: 3px;
 }
 
-/* =========================
-   手機版
-   ========================= */
-
 @media (max-width: 600px) {
-  .topbar {
+    .topbar {
     height: calc(58px + env(safe-area-inset-top));
-    padding:
-      env(safe-area-inset-top)
-      max(16px, env(safe-area-inset-right))
-      0
-      max(16px, env(safe-area-inset-left));
-  }
+    padding: env(safe-area-inset-top) 16px 0;
+    }
 
-  .brand {
+    .brand {
     font-size: 16px;
-  }
+    }
 
-  .brand-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 17px;
-  }
-
-  .login-page {
+    .login-page {
+    min-height: calc(100vh - 58px);
     place-items: start center;
-    padding:
-      56px
-      max(20px, env(safe-area-inset-right))
-      max(32px, env(safe-area-inset-bottom))
-      max(20px, env(safe-area-inset-left));
-  }
+    padding-top: 56px;
+    }
 
-  .login-card {
-    max-width: 100%;
+    .login-card {
     padding: 30px 24px;
-    border-radius: 18px;
-  }
+    }
 
-  .golf-icon {
+    .golf-icon {
     width: 64px;
     height: 64px;
     font-size: 30px;
-  }
+    }
 
-  .login-card h1 {
+    .login-card h1 {
     font-size: 24px;
-  }
+    }
 
-  .subtitle {
+    .subtitle {
     margin: 10px 0 30px;
     font-size: 15px;
-  }
+    }
 
-  .login-card label {
+    .login-card label {
     margin-bottom: 8px;
     font-size: 14px;
-  }
+    }
 
-  .input-wrap {
+    .input-wrap {
     height: 54px;
-  }
+    }
 
-  .input-icon {
+    .input-icon {
     margin: 0 12px 0 16px;
     font-size: 18px;
-  }
+    }
 
-  .input-wrap input {
+    .input-wrap input {
     font-size: 16px;
-  }
+    }
 
-  .login-button {
+    .login-button {
     height: 48px;
     margin-top: 22px;
     font-size: 16px;
-  }
+    }
 }
+
+/* iPhone 狀態列後方維持深綠 */
+html {
+  min-height: 100%;
+  background: var(--brand-green);
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 標頭填入 iPhone 頂端安全區 */
+.topbar {
+  height: calc(64px + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) 20px 0;
+  flex: 0 0 auto;
+}
+
+/* 讓登入頁背景填滿剩餘高度 */
+.login-page {
+  flex: 1;
+  min-height: 0;
+}
+/* 僅首頁使用：手機下拉露出深綠，內容仍為米白 */
+html {
+  background-color: var(--brand-green);
+}
+
+@media (max-width: 600px) {
+  body.app-page {
+    background-color: var(--brand-green) !important;
+  }
+  }
